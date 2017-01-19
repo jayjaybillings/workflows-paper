@@ -1,6 +1,6 @@
 %%This is a very basic article template.
 %%There is just one section and two subsections.
-\documentclass{report}
+\documentclass{acmart}
 
 \usepackage{graphicx}
 \usepackage{color}
@@ -17,22 +17,39 @@ columns=flexible
 }
 \usepackage{url}
 
-\title{A Proposal on Workflows and the Interoperability of Workflow
+\title{FIXME! - A Proposal on Workflows and the Interoperability of Workflow
 Management Systems}
-\author{Jay Jay Billings}
-\date{January 11, 2017}
+\author{An Author, Another Author}
+\date{\today}
 
 \begin{document}
 
+\begin{abstract}
+PUT ABSTRACT HERE
+\end{abstract}
+
 \maketitle
+
+\section{Notice of Copyright}\label{notice-of-copyright}
+
+This manuscript has been authored by UT-Battelle, LLC under Contract No.
+DEAC05-00OR22725 with the U.S. Department of Energy. The United States
+Government retains and the publisher, by accepting the article for
+publication, acknowledges that the United States Government retains a
+nonexclusive, paid-up, irrevocable, world-wide license to publish or
+reproduce the published form of this manuscript, or allow others to do
+so, for United States Government purposes. The Department of Energy will
+provide public access to these results of federally sponsored research
+in accordance with the DOE Public Access Plan
+(http://energy.gov/downloads/doe-public-access-plan ).
 
 \input{introduction}
 \input{workflows-review}
-\input{eclipse-ice}
 \input{problems}
-\input{proposal}
+\input{abstractions}
+\input{solution}
 
-\bibliographystyle{unsrt}
+\bibliographystyle{ACM-Reference-Format}
 \bibliography{bib}
 
 \end{document}

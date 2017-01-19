@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Wed Jan 18 20:33:15 EST 2017
+markTmpDer=true
+builderNum=2
+outputDir=bin/
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=src
+mainTexFile=main.tex
+outputFile=billings-jha-workflows.pdf
+langSpell=
+markDer=true
+srcDir=src/
