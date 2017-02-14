@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: ACM-Reference-Format.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: bib.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--empty address in barker_scientific_2007
+Warning--empty publisher in han_taxonomy_1998
+Warning--empty address in han_taxonomy_1998
+Warning--page numbers missing in both pages and numpages fields in han_taxonomy_1998
+Warning--no number and no volume in jha_building_2016
+Warning--page numbers missing in both pages and numpages fields in jha_building_2016
+You've used 16 entries,
+            5551 wiz_defined-function locations,
+            1397 strings with 19030 characters,
+and the built_in function-call counts, 24292 in all, are:
+= -- 3322
+> -- 739
+< -- 1
++ -- 234
+- -- 929
+* -- 1886
+:= -- 2511
+add.period$ -- 83
+call.type$ -- 16
+change.case$ -- 117
+chr.to.int$ -- 16
+cite$ -- 22
+duplicate$ -- 1130
+empty$ -- 839
+format.name$ -- 304
+if$ -- 4993
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 38
+newline$ -- 205
+num.names$ -- 128
+pop$ -- 418
+preamble$ -- 1
+purify$ -- 196
+quote$ -- 0
+skip$ -- 339
+stack$ -- 0
+substring$ -- 3673
+swap$ -- 104
+text.length$ -- 1333
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 224
+warning$ -- 6
+while$ -- 137
+width$ -- 0
+write$ -- 347
+(There were 6 warnings)

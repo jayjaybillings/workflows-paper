@@ -1,0 +1,271 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{00}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{{\tt DOI:}\penalty0{#1}\ }
+  \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       #1{#1}          \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[\protect\citeauthoryear{Barker and Hemert}{Barker and Hemert}{2007}]%
+        {barker_scientific_2007}
+\bibfield{author}{\bibinfo{person}{Adam Barker} {and} \bibinfo{person}{Jano~van
+  Hemert}.} \bibinfo{year}{2007}\natexlab{}.
+\newblock \showarticletitle{Scientific {Workflow}: {A} {Survey} and {Research}
+  {Directions}}. In \bibinfo{booktitle}{{\em Parallel {Processing} and
+  {Applied} {Mathematics}}}. \bibinfo{publisher}{Springer, Berlin, Heidelberg},
+  \bibinfo{pages}{746--753}.
+\newblock
+\showURL{%
+\url{http://link.springer.com/chapter/10.1007/978-3-540-68111-3_78}}
+\newblock
+\shownote{DOI: 10.1007/978-3-540-68111-3\_78.}
+
+
+\bibitem[\protect\citeauthoryear{Billings}{Billings}{2016}]%
+        {billings_[science-iwg]_2016}
+\bibfield{author}{\bibinfo{person}{Jay~Jay Billings}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \bibinfo{title}{[science-iwg] {Workflows}, workflows and more
+  workflows}.
+\newblock   (\bibinfo{date}{April} \bibinfo{year}{2016}).
+\newblock
+\showURL{%
+\url{https://dev.eclipse.org/mhonarc/lists/science-iwg/msg01699.html}}
+
+
+\bibitem[\protect\citeauthoryear{Clay}{Clay}{2015}]%
+        {clay_incorporating_2015}
+\bibfield{author}{\bibinfo{person}{Robert~L. Clay}.}
+  \bibinfo{year}{2015}\natexlab{}.
+\newblock \bibinfo{booktitle}{{\em Incorporating {Workflow} for {V}\&v/{Uq} in
+  the {Sandia} {Analysis} {Workbench}.}}
+\newblock \bibinfo{type}{{T}echnical {R}eport} SAND2015-1556C.
+  \bibinfo{institution}{Sandia National Laboratories (SNL-CA), Livermore, CA
+  (United States)}.
+\newblock
+\showURL{%
+\url{https://www.osti.gov/scitech/biblio/1241123}}
+
+
+\bibitem[\protect\citeauthoryear{Deelman, Peterka, Altintas, Carothers,
+  Kleese~van Dam, Moreland, Ramakrishnan, and Vetter}{Deelman
+  et~al\mbox{.}}{2015}]%
+        {deelman_future_2015}
+\bibfield{author}{\bibinfo{person}{Ewa Deelman}, \bibinfo{person}{Tom Peterka},
+  \bibinfo{person}{Ilkay Altintas}, \bibinfo{person}{Christopher Carothers},
+  \bibinfo{person}{Kerstin Kleese~van Dam}, \bibinfo{person}{Kenneth Moreland},
+  \bibinfo{person}{Lavanya Ramakrishnan}, {and} \bibinfo{person}{Jeffrey
+  Vetter}.} \bibinfo{year}{2015}\natexlab{}.
+\newblock \bibinfo{booktitle}{{\em The {Future} of {Scientific} {Workflows}}}.
+\newblock \bibinfo{type}{Workshop}. \bibinfo{institution}{U.S. Department of
+  Energy}.
+\newblock
+\showURL{%
+\url{http://science.energy.gov/~/media/ascr/pdf/programdocuments/docs/workflows_final_report.pdf}}
+
+
+\bibitem[\protect\citeauthoryear{Han, Sheth, and Bussler}{Han
+  et~al\mbox{.}}{1998}]%
+        {han_taxonomy_1998}
+\bibfield{author}{\bibinfo{person}{Yanbo Han}, \bibinfo{person}{Amit Sheth},
+  {and} \bibinfo{person}{Christoph Bussler}.} \bibinfo{year}{1998}\natexlab{}.
+\newblock \showarticletitle{A taxonomy of adaptive workflow management}. In
+  \bibinfo{booktitle}{{\em Workshop of the 1998 {ACM} {Conference} on
+  {Computer} {Supported} {Cooperative} {Work}}}.
+\newblock
+\showURL{%
+\url{https://www.researchgate.net/profile/Amit_Sheth/publication/228729962_A_taxonomy_of_adaptive_workflow_management/links/02bfe5105a211e3991000000.pdf}}
+
+
+\bibitem[\protect\citeauthoryear{Hollingsworth and Hampshire}{Hollingsworth and
+  Hampshire}{1993}]%
+        {hollingsworth_workflow_1993}
+\bibfield{author}{\bibinfo{person}{David Hollingsworth} {and}
+  \bibinfo{person}{U.~K. Hampshire}.} \bibinfo{year}{1993}\natexlab{}.
+\newblock \showarticletitle{Workflow management coalition the workflow
+  reference model}.
+\newblock \bibinfo{journal}{{\em Workflow Management Coalition\/}}
+  \bibinfo{volume}{68} (\bibinfo{year}{1993}), \bibinfo{pages}{26}.
+\newblock
+\showURL{%
+\url{http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.198.5206&rep=rep1&type=pdf}}
+
+
+\bibitem[\protect\citeauthoryear{Jha}{Jha}{2016}]%
+        {jha_towards_2016}
+\bibfield{author}{\bibinfo{person}{Shantenu Jha}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \bibinfo{title}{Towards the {Science} of {Workflows}}.
+\newblock   (\bibinfo{year}{2016}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Jha and Turilli}{Jha and Turilli}{2016}]%
+        {jha_building_2016}
+\bibfield{author}{\bibinfo{person}{Shantenu Jha} {and} \bibinfo{person}{Matteo
+  Turilli}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{A {Building} {Blocks} {Approach} towards {Domain}
+  {Specific} {Workflow} {Systems}?}
+\newblock \bibinfo{journal}{{\em arXiv:1609.03484 [cs]\/}}
+  (\bibinfo{date}{Sept.} \bibinfo{year}{2016}).
+\newblock
+\showURL{%
+\url{http://arxiv.org/abs/1609.03484}}
+\newblock
+\shownote{arXiv: 1609.03484.}
+
+
+\bibitem[\protect\citeauthoryear{Ludäscher, Altintas, Berkley, Higgins,
+  Jaeger, Jones, Lee, Tao, and Zhao}{Ludäscher et~al\mbox{.}}{2006}]%
+        {ludascher_scientific_2006}
+\bibfield{author}{\bibinfo{person}{Bertram Ludäscher}, \bibinfo{person}{Ilkay
+  Altintas}, \bibinfo{person}{Chad Berkley}, \bibinfo{person}{Dan Higgins},
+  \bibinfo{person}{Efrat Jaeger}, \bibinfo{person}{Matthew Jones},
+  \bibinfo{person}{Edward~A. Lee}, \bibinfo{person}{Jing Tao}, {and}
+  \bibinfo{person}{Yang Zhao}.} \bibinfo{year}{2006}\natexlab{}.
+\newblock \showarticletitle{Scientific workflow management and the {Kepler}
+  system}.
+\newblock \bibinfo{journal}{{\em Concurrency Computat.: Pract. Exper.\/}}
+  \bibinfo{volume}{18}, \bibinfo{number}{10} (\bibinfo{date}{Aug.}
+  \bibinfo{year}{2006}), \bibinfo{pages}{1039--1065}.
+\newblock
+\showISSN{1532-0634}
+\showDOI{%
+\url{http://dx.doi.org/10.1002/cpe.994}}
+
+
+\bibitem[\protect\citeauthoryear{Megino, De, Caballero, Hover, Klimentov,
+  Maeno, Nilsson, Oleynik, Padolski, Panitkin, Petrosyan, and Wenaus}{Megino
+  et~al\mbox{.}}{2015}]%
+        {megino_panda:_2015}
+\bibfield{author}{\bibinfo{person}{Fernando~Barreiro Megino},
+  \bibinfo{person}{Kaushik De}, \bibinfo{person}{Jose Caballero},
+  \bibinfo{person}{John Hover}, \bibinfo{person}{Alexei Klimentov},
+  \bibinfo{person}{Tadashi Maeno}, \bibinfo{person}{Paul Nilsson},
+  \bibinfo{person}{Danila Oleynik}, \bibinfo{person}{Sergey Padolski},
+  \bibinfo{person}{Sergey Panitkin}, \bibinfo{person}{Artem Petrosyan}, {and}
+  \bibinfo{person}{Torre Wenaus}.} \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{{PanDA}: {Evolution} and {Recent} {Trends} in {LHC}
+  {Computing}}.
+\newblock \bibinfo{journal}{{\em Procedia Computer Science\/}}
+  \bibinfo{volume}{66} (\bibinfo{date}{Jan.} \bibinfo{year}{2015}),
+  \bibinfo{pages}{439--447}.
+\newblock
+\showISSN{1877-0509}
+\showDOI{%
+\url{http://dx.doi.org/10.1016/j.procs.2015.11.050}}
+
+
+\bibitem[\protect\citeauthoryear{Montoya}{Montoya}{2016}]%
+        {montoya_apex_2016}
+\bibfield{author}{\bibinfo{person}{David Montoya}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \bibinfo{title}{{APEX} {Workflows}}.
+\newblock   (\bibinfo{year}{2016}).
+\newblock
+\showURL{%
+\url{https://www.nersc.gov/assets/apex-workflows-v2.pdf}}
+
+
+\bibitem[\protect\citeauthoryear{NERSC}{NERSC}{2016}]%
+        {nersc_apex_2016}
+\bibfield{author}{\bibinfo{person}{NERSC}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \bibinfo{title}{{APEX}}.
+\newblock   (\bibinfo{year}{2016}).
+\newblock
+\showURL{%
+\url{http://www.nersc.gov/research-and-development/apex/}}
+
+
+\bibitem[\protect\citeauthoryear{Pack}{Pack}{2016}]%
+        {pack_sos20_2016}
+\bibfield{author}{\bibinfo{person}{Daniel Pack}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \bibinfo{title}{{SOS}20}.
+\newblock   (\bibinfo{date}{March} \bibinfo{year}{2016}).
+\newblock
+\showURL{%
+\url{http://www.csm.ornl.gov/SOS20/agenda.html}}
+
+
+\bibitem[\protect\citeauthoryear{Pizzi, Cepellotti, Sabatini, Marzari, and
+  Kozinsky}{Pizzi et~al\mbox{.}}{2016}]%
+        {pizzi_aiida:_2016}
+\bibfield{author}{\bibinfo{person}{Giovanni Pizzi}, \bibinfo{person}{Andrea
+  Cepellotti}, \bibinfo{person}{Riccardo Sabatini}, \bibinfo{person}{Nicola
+  Marzari}, {and} \bibinfo{person}{Boris Kozinsky}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{{AiiDA}: automated interactive infrastructure and
+  database for computational science}.
+\newblock \bibinfo{journal}{{\em Computational Materials Science\/}}
+  \bibinfo{volume}{111} (\bibinfo{date}{Jan.} \bibinfo{year}{2016}),
+  \bibinfo{pages}{218--230}.
+\newblock
+\showISSN{0927-0256}
+\showDOI{%
+\url{http://dx.doi.org/10.1016/j.commatsci.2015.09.013}}
+
+
+\bibitem[\protect\citeauthoryear{Van Der~Aalst}{Van Der~Aalst}{1998}]%
+        {van_der_aalst_application_1998}
+\bibfield{author}{\bibinfo{person}{W.~M.~P. Van Der~Aalst}.}
+  \bibinfo{year}{1998}\natexlab{}.
+\newblock \showarticletitle{The application of petri nets to workflow
+  management}.
+\newblock \bibinfo{journal}{{\em J CIRCUIT SYST COMP\/}} \bibinfo{volume}{08},
+  \bibinfo{number}{01} (\bibinfo{date}{Feb.} \bibinfo{year}{1998}),
+  \bibinfo{pages}{21--66}.
+\newblock
+\showISSN{0218-1266}
+\showDOI{%
+\url{http://dx.doi.org/10.1142/S0218126698000043}}
+
+
+\bibitem[\protect\citeauthoryear{Yu and Buyya}{Yu and Buyya}{2005}]%
+        {yu_taxonomy_2005}
+\bibfield{author}{\bibinfo{person}{Jia Yu} {and} \bibinfo{person}{Rajkumar
+  Buyya}.} \bibinfo{year}{2005}\natexlab{}.
+\newblock \showarticletitle{A {Taxonomy} of {Workflow} {Management} {Systems}
+  for {Grid} {Computing}}.
+\newblock \bibinfo{journal}{{\em J Grid Computing\/}} \bibinfo{volume}{3},
+  \bibinfo{number}{3-4} (\bibinfo{date}{Sept.} \bibinfo{year}{2005}),
+  \bibinfo{pages}{171--200}.
+\newblock
+\showISSN{1570-7873, 1572-9184}
+\showDOI{%
+\url{http://dx.doi.org/10.1007/s10723-005-9010-8}}
+
+
+\end{thebibliography}
