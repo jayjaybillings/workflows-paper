@@ -1,4 +1,4 @@
-\section{Workflows}\label{workflows}
+\section{Background}\label{workflows}
 
 As mentioned previously, one of the most challenging aspects of studying
 workflows is the way the vocabulary has been overloaded unintentionally.
@@ -15,8 +15,8 @@ execute tasks, but ``to manage the flow of work through the
 organization,'' and that managing workflows is the natural evolution
 from the monolithic applications of the 1960s to applications that rely
 on external functionality in the 1990s, \cite{van_der_aalst_application_1998}.
-(One might argue that Van Der Aalst's depiction continues today with the
-growth of the ``microservices'' architectural movement.) By 1995, in the
+\footnote{One might argue that Van Der Aalst's depiction continues today with the
+growth of the ``microservices'' architectural movement.} By 1995, in the
 presence of many workflow tools, the Workflow Management Coalition had developed a ``standard'' definition of
 workflows, \cite{hollingsworth_workflow_1993},
 
@@ -39,84 +39,40 @@ define a workflow as
 well-defined order to accomplish a specific goal.
 \end{displayquote}
 
-This definition is important because of what is missing: the human
-element. For many in the scientific workflows community this has become
+This latter definition is important because of what is missing: the human
+element. For many in the grid/eScience workflows community this has become
 the standard definition of a workflow and the involvement of humans
-results not in a single workflow, but two workflows spanned by a human.
+results not in a single workflow, but multiple workflows spanned by a human.
 Machines or instruments are absent from the definition as well, but in
-practice many modern scientific workflows are launched automatically
+practice many modern grid workflows are launched automatically
 when data ``comes off'' of instruments because they remain the primary
 source of data in grid workflows, (c.f. - \cite{megino_panda:_2015}).
 
 In addition to ``grid workflows,'' the scientific community started
-exploring ``modeling and simulation'' workflows which focus not on data
+exploring ``modeling and simulation workflows'' which focus not on data
 flow, but on the orchestration of activities related to modeling and
 simulation instead, sometimes on small local computers, but often on the
-largest of the world's ``Leadership Class'' supercomputers. These
-workflows typically fall into a subset of their more general cousins
-that can be found in the grid or business communities, but unlike grid
+largest of the world's ``Leadership Class'' supercomputers. Unlike grid
 workflows they tend to require human interaction in one way or another.
 Some of these workflows are defined in the context of a particular way
 of working, such as the Automation, Data, Environment, and Sharing
 (ADES) model of Pizzi et al., \cite{pizzi_aiida:_2016}, the
 ``Design-to-Analysis'' model of Clay et al., \cite{clay_incorporating_2015}, or
-the model of Billings et al. presented later in this work during the
-discussion on the Eclipse Integrated Computational Environment. However,
-many scientific workflows, while exceptionally well defined, remain hard
-coded into dedicated environments developed for the sole purpose of
-executing that single or at most a few related workflows.
+the model of Billings et al.,\cite{billings_eclipse_2017}. Many scientific workflows, while exceptionally well defined and capable, remain hard-coded into dedicated environments - 
+not general purpose workflow systems - developed for the sole purpose of
+executing that single or at most a few related workflows, \cite{lingerfelt_beam:_2016}.
 
 Additional types of workflows in the scientific community include
 workflows that process ensembles of calculations, \cite{montoya_apex_2016},
-and workflows that are used for testing software.
+and workflows that are used for testing software. \todo{EXPAND!}
 
-\section{Taxonomies and
+\subsection{Taxonomies and
 Classification}\label{taxonomies-and-classification}
-
+\todo{Why are we talking about taxonomies and classification?}
 There have been several efforts to classify, survey or develop taxonomies
-for workflows. Yu and Buyya are the only source that provides what can
-be truly considered a ``taxonomy,'' by showing the hierarchical
-relationships between workflow concepts. Most of the other efforts
-discussed below, while claiming to produce taxonomies, in fact produce
-controlled vocabularies.
-
-
-Human involvement is critical in some workflows which require adaptive
-management, as shown by Han and Bussler, \cite{han_taxonomy_1998}. Their work
-considers adaptive workflow management in the context of healthcare
-workflows and argues that workflow technology in 2002 was incapable of
-adapting sufficiently to meet the unexpected needs of medical personnel.
-Along with unexpected needs (``changing environment''), they cite the
-evolution of software systems (``technical advances'') as another
-critical area that leads to required changes in workflow management
-systems.
-
-Han and Bussler discuss situations that lead to ``ad-hoc derivation'' of
-workflows. ``Ad-hoc derivation'' in this case means generating extra
-workflow steps or details, such as converting from an abstract to a
-concrete workflow as Pegasus and other grid workflow systems do.
-Specifically, Han and Bussler cite dynamic refinement, user involvement,
-unpredictable events and erroneous situations as systems that require
-the workflow to behave in an unplanned way, and for which
-workflow managements systems should be prepared. Meta-models, open-point
-(more commonly known as ``extension point'') or hybrid approaches are
-proposed as solutions.
-
-It is important to note that Han and Bussler consider only business
-workflows and management systems, not scientific workflows and
-management systems. In this context they also share some important
-wisdom that is, arguably, of equal importance to scientific workflows:
-
-\begin{displayquote}
-Workflow systems do not exist for their own purposes. They
-are a constituent component of a business system. A business system is usually domain
-specific.
-\end{displayquote}
-
-This is an important consideration for scientific workflows because the
-``business logic'' of scientific workflows is ``domain logic'' that is
-highly specific to the scientific domain under consideration. This
-necessarily leads to a diverse ecosystem of workflow systems.
+for workflows. Yu and Buyya present an exceptional and noteworthy taxonomy for grid
+workflows. Multiple other efforts provide highly useful vocabularies and analyses as
+well.
 
 Yu and Buyya developed a taxonomy for workflow management systems on
 grids that sought to capture the architectural style while identifying
@@ -131,14 +87,51 @@ common to all systems, others would appear to be grid-specific at present, such
 as ``Workflow QoS Constraints''. Their work also shows how thirteen common grid
 workflow management systems, including Pegasus and Kepler, are covered by the
 taxonomy. Like other authors, Yu and Buyya cite the lack of standardized
-workflow syntax and language as sources of interoperability issues. Yu's and
-Buyya's work is extremely detailed and a very helpful resource for
-understanding grid workflows.
+workflow syntax and language as sources of interoperability issues. Their work is extremely
+detailed and a very helpful resource for understanding grid workflows.
+
+As a counter point to the often automated grid workflows, human involvement is 
+critical in cases which require adaptive
+management, as shown by Han and Bussler, \cite{han_taxonomy_1998}. Their work
+considers adaptive workflow management in the context of healthcare
+workflows and argues that workflow technology in 2002 was incapable of
+adapting sufficiently to meet the unexpected needs of medical personnel.
+Along with unexpected needs (``changing environment''), they cite the
+evolution of software systems (``technical advances'') as another
+critical area that leads to required changes in workflow management
+systems.
+
+Han and Bussler also discuss situations that lead to ``ad-hoc derivation'' of
+workflows. ``Ad-hoc derivation'' in this case means generating extra
+workflow steps or details, such as converting from an abstract to a
+concrete workflow as Pegasus and other grid workflow systems do.
+Specifically, Han and Bussler cite dynamic refinement, user involvement,
+unpredictable events and erroneous situations as systems that require
+the workflow to behave in an unplanned way, and for which
+workflow managements systems should be prepared. Meta-models, open-point
+(more commonly known as ``extension point'') or hybrid approaches are
+proposed as solutions.
+
+It is important to note that Han and Bussler only consider business
+workflows and management systems, not scientific workflows and
+management systems. In this context they also share some important
+wisdom that is, arguably, of equal importance to scientific workflows:
+
+\begin{displayquote}
+Workflow systems do not exist for their own purposes. They
+are a constituent component of a business system. A business system is usually domain
+specific.
+\end{displayquote}
+
+This is an important consideration for scientific workflows because the
+``business logic'' of scientific workflows is ``domain logic'' that is
+highly specific to the scientific domain under consideration. This
+necessarily leads to a diverse workflow science ecosystem.
 
 Scientific workflow management systems have flourished since their
 inception, although not without significant overlap and duplication of
 effort. The survey of scientific workflow management systems by Barker
-and Hemert illustrates both the growth and problems while also providing
+and Hemert illustrates both growth and growing pains while also providing
 important observations and recommendations on the topic,
 \cite{barker_scientific_2007}.
 
@@ -148,14 +141,12 @@ automation. The authors make an important comparison between traditional
 business workflow management systems and their scientific counterparts,
 citing in particular that traditional business workflow tools employ the
 wrong abstraction for scientists They define workflows using the
-``standard'' definition from the Workflow Management Coalition,
-previously mentioned above.
+``standard'' definition from the Workflow Management Coalition, (c.f. \S \ref{workflows} above).
 
 The discussion points that Barker and Hemert raise are important because
 of their continuing importance and relevance today, particularly the
 need to enable programmability through standard languages instead of
-custom, proprietary languages. (The reader is encouraged to read the
- entire paper for more details.) Sticking to
+custom, proprietary languages. Sticking to
 standards is also important and perhaps illustrated best by Barker's and
 Hemert's statement that
 
@@ -177,53 +168,31 @@ Actors are re-usable independent blocks of computation, such as:
 Web Services, database calls, etc.
 \end{displayquote}
 
-Jha and Turilli have proposed using independent ``building blocks'' as
-an approach to scientific workflows which espouses a similar
-relationship to infrastructure services, \cite{jha_building_2016}. The
-similarity is notable and the exact relationship between Jha's blocks and
-Actor-Oriented Programming merit further investigation. 
-Jha and Turilli provide an ambiguous definition of workflows, stating
-that workflows are both comprised of tasks and provide a description of
-the resources and constraints for each task. The ambiguity rises from
-the definition of ``tasks.'' If tasks are compute processes, then their
-definition is equivalent to that of grid workflows. However, if a task
-could include human interaction during execution, then they have a much
-broader definition than what is normally found in the grid literature,
-and their definition more closely resembles a business workflow.
-Building blocks, on the other hand, are concretely defined as those
-pieces of middleware that are self-sufficient, interoperable,
-composable, and extensible, (with detailed definitions of each
-provided). The RADICAL-Cybertools suite of software modules from Jha's
-group is presented as a sample set of building blocks and two case
-studies where these tools were successfully as such are presented.
+This is consistent with the solution proposed in this paper and discussed in \S \ref{}.\todo{fix reference!}
 
-Montoya et al. discuss workflows needs for the Alliance for Application
+Montoya et al. discuss workflow needs for the Alliance for Application
 Performance at Extreme Scale (APEX), \cite{nersc_apex_2016}, and describe
 three main classes of workflows: Simulation Science, Uncertainty
 Quantification (UQ), and High Throughput Computing (HTC),
 \cite{montoya_apex_2016}.
-HTC workflows start with the collection of data from experiments that is in turn transported to large compute facilities for
+HTC workflows start with the collection of data from experiments that is in turn
+transported to large compute facilities for
 processing. Many grid workflows are HTC workflows, but not all HTC
-workflows are grid workflows since some HTC workflows, such as those
-those presented by Montoya et al., maybe be run on large resources that
-are not traditionally ``grid machines.'' Simulation science workflows,
-referred to above as modeling and simulation workflows, are those
-workflows that are primarily focused on modeling and simulation
-activities. UQ workflows build on modeling and simulation workflows by
-executing ensembles of jobs or ensembles of whole workflows to quantify
-uncertainty in simulation results. Montoya et al. also provide a detailed
-mapping of each workflow type to optimal hardware resources for the APEX
+workflows are grid workflows since some HTC workflows - such as those
+those presented by Montoya et al. - may be run on large resources that
+are not traditionally ``grid machines.'' When Montoya et al. describe scientific workflows,
+they are refering to the modeling and simulation workflows described above. Montoya et al. also provide a
+detailed mapping of each workflow type to optimal hardware resources for the APEX
 program.
 
 The U.S. Department of Energy sponsored the \emph{DOE NGNS/CS Scientific
 Workflows Workshop} on April 20-21st 2015. In the report, Deelman et al.
 describe the requirements and research directions for scientific
-workflows for the exascale environment, \cite{deelman_future_2015}. The report
-describes scientific workflows primarily by three application types:
+workflows for the exascale environment, \cite{deelman_future_2015}\cite{deelman_future_2017}. The report (and paper) describes scientific workflows primarily by three application types:
 Simulations, Instruments, and Collaborations. The findings of the workshop are
 comprehensive and encouraging, with recommendations for research
 priorities in Application Requirements, Hardware Systems, System
-Software, WMS Design and Execution, Programming and Usability,
+Software, Workflow Management System Design and Execution, Programming and Usability,
 Provenance Capture, Validation, and Workflow Science.
 
 The definitions of a ``workflow'' and ``workflow management systems''
@@ -235,100 +204,36 @@ degree of generality are required by both the description of the
 workflow and the management system. \footnote{The report appears to provide
 three separate definitions for ``workflow'' on pages 6, 9 and 10.}
 
-The brief summary of different workflow models above is a sample of the
-confusion in the ``marketplace'' and illustrates the lack of a coherent
-understanding of workflows.
-
-The next section presents the workflow model, system architecture and
-applications of the Eclipse Integrated Computational Environment. This
-model limits its scope to high-performance computing (HPC) and to the
-set of possible workflows that come creating input, executing jobs,
-analyzing results, managing data, and modifying code. However, as ``limited'' as
-ICE's model may be, it shows significant ability to interoperate with
-other workflow engines. This and other qualities of the system are why
-it is revisited later as a proposed platform for testing an
-interoperability layer.
-
----------------
-
-The previous review of workflows and workflow management systems as well as the
-discussion of Eclipse ICE illustrated the diverse nature of scientific
-workflows. There are many problems that arise from this diversity the community
-would stand to benefit if they could be addressed. However, it should be clear
-from the previous sections that there are two significant problems facing the workflow science community:
-\begin{itemize}
-  \item Everyone has their own workflow tools, and
-no two tool chains are the same.
-  \item There is very little interoperability in the workflow tool space.
-\end{itemize}
-
-The following sections elaborate on community drivers for providing
-interoperability between workflow management systems.
-
-
-In Ref~\cite{deelman-fgcs} a feeble attempt is made to characterize workflow
-management systems. The authors reduce key properties of workflow systems into
-four incongruent areas: (i) design, (ii) execution and monitoring, (iii)
+Ferreira da Silva et al. attempt to characterize workflow management systems in 
+\cite{ferreira_da_silva_characterization_nodate}. The authors reduce key properties of workflow
+systems into four incongruent areas: (i) design, (ii) execution and monitoring, (iii)
 reusability and (iv) collaboration. These properties are essential
 considerations for most  software with limited specificity for workflow
-management systems. Further more, there is general conflation between
+management systems. Furthermore, there is general conflation between
 classification and taxonomy and significant incoherence between entries in
 equivalence classes. Most significantly, it fluctuates somewhat chaotically
 between discussing workflows and workflow management systems without linking
 workflow properties to successful design and properties of workflow systems.
 
+\subsection{Interoperability}
 
-
-
-
-\section{A Buildings Block Approach}\label{a-buildings-block-approach}
-
-For many reasons, the traditional approach for building workflow systems
-has been to build as much of the required capability as possible into
-the system itself, relying very little on external services or even
-third party code. This does not track will with the course of history
-since high-level functionality tends to slowly creep down the
-software stack and into kernels, kernel services, and system libraries. Jha and
-Turilli discuss this trend as it relates to workflows from a cyber
-infrastructure perspective and to existing large scale scientific
-workflow efforts, \cite{jha_building_2016}. They propose that, while historically
-successful, monolithic workflow systems present many problems for users,
-developers, and maintainers. Instead, they propose that a new ``Lego
-style'' approach might work better where individual ``building blocks''
-of capability are assembled into the final workflow product. These
-building blocks would include things like programming interfaces to
-queuing systems, programmable pilot systems for scheduling jobs,
-workload balancers, and ensemble execution tools, among others.
-
-This approach would greatly improve both interoperability and sustainability
-because it would standardize the programming interfaces and backends used by
-workflow management systems. Jha et al. are developing a white paper to address
-this further, \cite{jha_towards_2016}.
-
-\section{SOS20 Discussion on
-Workflows}\label{sos20-discussion-on-workflows}
-
-Session IV of the Twentieth Anniversary Meeting of the SOS Workshop
+Uncertainty in the very definition of workflows and workflow management systems makes it
+difficult or impossible to address complicated workflows that may require interoperability
+across computing facilities or distribution of ``sub-workflows'' across multiple systems.
+For example, Session IV of the Twentieth Anniversary Meeting of the SOS Workshop
 (SOS20) focused on workflow and workflow management
 system development activities of the three participating institutions: Sandia
-National Laboratory, Oak Ridge National Laboratory, and the Swiss National Supercomputing Centre, \cite{pack_sos20_2016}. Multiple
+National Laboratory, Oak Ridge National Laboratory, and the Swiss National Supercomputing
+Centre, \cite{pack_sos20_2016}. Multiple
 presenters illustrated the challenges facing the workflow science community and
-organized a separate, spontaneous ``Birds of a Feather'' (BOF) session at
-the end of the event. The BOF attendees widely agreed after a thorough
-discussion that no one single workflow management system could satisfy
-all the needs of those present, but that the community as a whole would
-be served best by seeking to enable interoperability where possible. This
-discussion led to a wider engagement of the community by BOF attendees
-who decided that it would be best to engage in an open public forum so that
-other groups could join the effort, \cite{billings_[science-iwg]_2016}.
+widely agreed that no single workflow management system could satisfy
+all the needs of those present. Instead, attendees proposed that the community as a whole would
+be served best by seeking to enable interoperability where possible. 
 
-\section{High-Performance Computing
-Drivers}\label{high-performance-computing-drivers}
-
-The large number of workflow management systems and lack of
-interoperability is a significant barrier to their adoption in
-high-performance computing facilities such as the U.S. Department of Energy's
-Leadership Computing Facilities. The high performance computing Facility
+Similar considerations are present in reports and discussions surrounding the future of
+workflow management in the Leadership Computing Facilities where the ``proliferation'' of
+workflow management systems and the lack of a consistent definition of a workflow are 
+signficant barriers to the adoption of this technology. The High Performance Computing Facility
 Operational Assessment 2015: Oak Ridge Leadership Computing Facility
 report, \cite{barker_scientific_2007}, illustrates the problem that such facilities
 face,
@@ -347,30 +252,19 @@ stakeholders.
 \end{displayquote}
 
 The Oak Ridge Leadership Computing Facility (OLCF) is not alone in this
-as other Leadership Computing Facilities face the same problem. Few
-of these facilities have discussed the possibility they may end up
+because other Leadership Computing Facilities face the same problem. Few
+of these facilities have discussed the possibility every facility may end up
 supporting different workflows systems entirely such that workflows at
 one facility can not be run at another without significant work to
-install an additional workflow management system!
+install one or more additional workflow management systems!
 
-Developing interoperability layers based on common building blocks with
-standard service interfaces would address both of these problems by
-allowing facilities to run various workflows on the system that worked
-best for their hardware and software configuration.
-
-\section{Energy Science Drivers}\label{energy-science-drivers}
-
-The Future of Scientific Workflows report by Deelman et al. illustrates
-the idea of the ``large-scale science campaign,'' \cite{deelman_future_2015}.
-Such a campaign integrates multiple workflows to perform data
-acquisition from experimental equipment, modeling and analysis with
-supercomputers, and data analysis with either grids computing or
-supercomputers. This is, in essence, the same problem that
+This idea is also illustrated well in The Future of Scientific Workflows report by Deelman et  
+al. through the concept of the ``large-scale science campaign,'' \cite{deelman_future_2015}.
+Such a campaign integrates multiple workflows, not necessarily all in the same workflow
+management syste, to perform data acquisition from experimental equipment, modeling and analysis with supercomputers, and data analysis with either grids computing or
+supercomputers.\footnote{This is, in essence, the same problem that
 PanDA/BigPanDA solves for the Large Hadron Collider. So, while it is not
-a new problem, it is increasingly common. One solution to this problem
-is to support all the possible workflow management systems, but that
-becomes quickly unsustainable, as the OLCF learned through experience.
-Enabling interoperability is a much more sustainable solution.
+a new problem, it is increasingly common.} It is quite clear that \todo{FIXME! finish sentence!}
 
 An interesting case study is the ICEMAN project at Oak Ridge National
 Laboratory, on which the author is a co-principal investigator. ICEMAN
@@ -380,3 +274,14 @@ Laboratory's Compute Advanced Data Environment for Science (CADES),
 Eclipse ICE, and AiiDA (c.f. - \cite{pizzi_aiida:_2016}) to automate the
 analysis of quasielastic neutron scattering data and provide a
 comprehensive problem solving environment for scientists.
+
+The brief summary of different workflow models and related problems above illustrate the
+diversity in the ``marketplace'' and illustrates the lack of a coherent understanding of 
+workflows or search for higher level concepts. At this point it should be clear that there are 
+two significant problems facing the workflow science community:
+\begin{itemize}
+  \item Everyone has their own workflow tools, and no two tool chains are the same.
+  \item There is very little interoperability in the workflow tool space.
+\end{itemize} The following sections propose that enough work has
+been done experimentally and that the community would greatly benefit from seeking a
+higher level of understanding and standardization through common building blocks.
