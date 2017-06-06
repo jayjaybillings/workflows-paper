@@ -63,8 +63,10 @@ not general purpose workflow systems - developed for the sole purpose of
 executing that single or at most a few related workflows, \cite{lingerfelt_beam:_2016}.
 
 Additional types of workflows in the scientific community include
-workflows that process ensembles of calculations, \cite{montoya_apex_2016},
-and workflows that are used for testing software. \todo{EXPAND!}
+workflows that process ensembles of calculations for uncertainty quantification, verification and validation or probabilistic risk assessment, \cite{montoya_apex_2016},
+and workflows that are used for testing software. These workflows share the property that they are all running a very large collection of jobs that only provide value when run together. However, they differ because testing workflows typically run each test as an independent task, whereas the other workflows may or may not change the tasks that are executed based on the intermediate state of the entire ensemble. These workflows require a large cluster or possibly a supercomputer in extreme cases.
+
+The above demonstrates the diversity in the workflow science space and that the very understanding of what a workflow is tends to vary between communities. However, this should not be taken to mean there is no common functionality between workflow management systems in different spaces. Many sources in the literature indicate that the contrary is in fact true: there is significant duplication and commonality in this space. The overlap in these technologies is typically demonstrated by developing taxonomies or classification systems.
 
 \subsection{Taxonomies and
 Classification}\label{taxonomies-and-classification}
