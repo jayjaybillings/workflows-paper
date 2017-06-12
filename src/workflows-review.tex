@@ -58,13 +58,15 @@ Some of these workflows are defined in the context of a particular way
 of working, such as the Automation, Data, Environment, and Sharing
 (ADES) model of Pizzi et al., \cite{pizzi_aiida:_2016}, the
 ``Design-to-Analysis'' model of Clay et al., \cite{clay_incorporating_2015}, or
-the model of Billings et al.,\cite{billings_eclipse_2017}. Many scientific workflows, while exceptionally well defined and capable, remain hard-coded into dedicated environments - 
-not general purpose workflow systems - developed for the sole purpose of
-executing that single or at most a few related workflows, \cite{lingerfelt_beam:_2016}.
+the model of Billings et al.,\cite{billings_eclipse_2017}.
 
 Additional types of workflows in the scientific community include
 workflows that process ensembles of calculations for uncertainty quantification, verification and validation or probabilistic risk assessment, \cite{montoya_apex_2016},
 and workflows that are used for testing software. These workflows share the property that they are all running a very large collection of jobs that only provide value when run together. However, they differ because testing workflows typically run each test as an independent task, whereas the other workflows may or may not change the tasks that are executed based on the intermediate state of the entire ensemble. These workflows require a large cluster or possibly a supercomputer in extreme cases.
+
+Many scientific workflows have been hard-coded into dedicated environments - not general purpose workflow management systems - that serve as point solutions developed for the sole purpose of that single well-defined workflow, or at most a few, to meet the needs of a single community.\footnote{See \cite{lingerfelt_beam:_2016} for a good example.} This leads to an important defining characteristic for workflow management systems versus the point solutions: workflow management systems are extensible through a public Application Programming Interface or other method and extension does not, in general, require the intervention of the original author. "Embedding" workflows into point-solutions this may be the best solution in many cases, but the distinction between point-solutions and full workflow management systems is important because it clearly demonstrates  that some parties prefer to focus on rapidly creating new or modifying old workflows while others may only be interested in executing well-defined, very stable workflows.
+
+Finally, an important class of scientific workflows is the set of ``conceptual workflows'' that broadly define activities based on the policies of a given community. These are common in large collaborations such as the Community Earth System Model (CESM), \cite{noauthor_cesm_nodate}. These workflows describe a series of activities that contain both human- and computer-controlled activities and look like business workflows. However, the level of detail tends to oscillate between very high and very low, as does the degree of abstraction, depending on the author. These workflows are important because they are often referred to in the same discussions as the other types of workflows described above. This illustrates the important fact that not all scientific workflows are machine executable, and it may be impossible to automate them in a workflow management system, even one that is very good at defining abstract workflows. It also demonstrates the difficulties that can arise in a discussion on workflows because of ambiguity in the definition.
 
 The above demonstrates the diversity in the workflow science space and that the very understanding of what a workflow is tends to vary between communities. However, this should not be taken to mean there is no common functionality between workflow management systems in different spaces. Many sources in the literature indicate that the contrary is in fact true: there is significant duplication and commonality in this space. The overlap in these technologies is typically demonstrated by developing taxonomies or classification systems.
 
@@ -271,6 +273,8 @@ seeks to use a combination of instruments from the Spallation Neutron
 Source, OLCF compute resources such as the Titan supercomputer, the
 Laboratory's Compute Advanced Data Environment for Science (CADES), the
 Eclipse Integrated Computational Environment for modeling and simulation workflows, and AiiDA (c.f. - \cite{pizzi_aiida:_2016}) to automate the analysis of inelastic and quasielastic neutron scattering data as part of a comprehensive problem solving environment for scientists.
+
+\subsection{Review Summary}
 
 The brief summary of different workflow models and related problems above illustrate the
 diversity in the ``marketplace'' and illustrates the lack of a coherent understanding of 
