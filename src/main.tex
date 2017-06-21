@@ -1,7 +1,8 @@
 %%This is a very basic article template.
 %%There is just one section and two subsections.
-\documentclass{acmart}
+\documentclass[conference]{IEEEtran}
 
+\usepackage{cite}
 \usepackage{graphicx}
 \usepackage{color}
 \usepackage{amsmath}
@@ -11,11 +12,11 @@
 \usepackage{booktabs}
 \usepackage[autostyle]{csquotes}
 \usepackage{listings}
-\usepackage{todonotes}
-\lstset{
-basicstyle=\small\ttfamily,
-columns=flexible
-}
+%\usepackage{todonotes}
+%\lstset{
+%basicstyle=\small\ttfamily,
+%columns=flexible
+%}
 \usepackage{url}
 
 \title{\todo{Need new title!}A Proposal on Workflows and the Interoperability of Workflow Management Systems}
@@ -24,14 +25,14 @@ columns=flexible
 
 \begin{document}
 
+\maketitle
+
 \begin{abstract}
 \todo{This abstract is based on the one page document that we sent to the future of scientific workflows document. I like the ideas, but it is just a place holder. We should update as needed!}
 
 Discussions on workflows and workflow management systems inevitably turn to questions about the natures of those very subjects. What is a workflow? What is a workflow management system? Surveying five papers will often give five different definitions of both. This has led to what the Oak Ridge Leadership Computing Facility’s 2016 report refers to as “the current proliferation of workflow systems in response to perceived domain-specific needs of scientific workflows.” Many of these systems tend to be monolithic with few extension mechanisms for those not fully versed in the existing code base, making reuse and interoperability practically impossible. This paper examines this phenomenon and proposes that the community should 1) focus on the development of common building blocks that can be assembled into domain-specific workflow management systems, and 2) that common building blocks are the best way to address workflow management system interoperability. This examination is performed in light of the growing need for "workflow campaigns" that execute workflows across facilities, systems and workflow types.
 
 \end{abstract}
-
-\maketitle
 
 \section{Notice of Copyright}\label{notice-of-copyright}
 
@@ -59,7 +60,8 @@ in accordance with the DOE Public Access Plan
 \input{roadAhead}
 \input{ack}
 
-\bibliographystyle{ACM-Reference-Format}
-\bibliography{bib}
+% The bibliography
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,bib}
 
 \end{document}
