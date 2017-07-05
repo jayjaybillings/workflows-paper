@@ -1,23 +1,58 @@
 \section{The Solution: Common Building Blocks}\label{buildings-blocks}
 
-The two problems detailed above are side effects of the relentless march of progress. The traditional approach for building workflow systems has
-been to build as much of the required capability as possible into the system
-itself, relying very little on external services or even third party code, to address pressing issues in one or more domains. However, history has shown that important high-level functionality slowly moves down the software stack and into kernels, kernel services, and system libraries. Is it better at that point to use an existing system that requires significant time and resources to learn, or to develop yet another workflow management system that the common tools, implementing only the gaps instead? The answer to this question is complicated by the fact that workflows themselves are not what they used to be. First, new workflows are often the representation of methodological advances and may be more pervasive, short-lived and wide-ranging than historical workflows. Further, they are no longer
-confined to ``big science'' projects since sophisticated workflows are needed by
-multiple science projects, which leads to diverse “design points” and thus
-making it unlikely that ``one size fits all.''  The ability to prototype, test
-and experiment with workflows at scale suggests a need for interfaces and
-middleware services that enable the rapid development of resources. The challenge is to provide these capabilities along with considerations of usability and extensibility.
+The two problems detailed above are side effects of the relentless march of
+progress. The traditional approach for building workflow systems has been to
+build as much of the required capability as possible into the system itself,
+relying very little on external services or even third party code, to address
+pressing issues in one or more domains. However, history has shown that
+important high-level functionality slowly moves down the software stack and into
+kernels, kernel services, and system libraries. Is it better at that point to
+use an existing system that requires significant time and resources to learn, or
+to develop yet another workflow management system that the common tools,
+implementing only the gaps instead? The answer to this question is complicated
+by the fact that workflows themselves are not what they used to be. First, new
+workflows are often the representation of methodological advances and may be
+more pervasive, short-lived and wide-ranging than historical workflows. Further,
+they are no longer confined to ``big science'' projects since sophisticated
+workflows are needed by multiple science projects, which leads to diverse
+“design points” and thus making it unlikely that ``one size fits all.''  The
+ability to prototype, test and experiment with workflows at scale suggests a
+need for interfaces and middleware services that enable the rapid development of
+resources. The challenge is to provide these capabilities along with
+considerations of usability and extensibility.
  
-Jha and Turilli discuss this trend as it relates to workflows from a 
+Jha and Turilli discuss this trend as it relates to workflows from a
 cyber-infrastructure perspective and to existing large-scale scientific workflow
 efforts, \cite{jha_building_2016}. They propose that, while historically
 successful, monolithic workflow systems present many problems for users,
 developers, and maintainers. Instead, they propose that a new ``Lego style''
 approach might work better where individual ``building blocks'' of capability
-are assembled into the final workflow management system, subsystem, or product. A building block is a collection of functionality commonly identified across existing workflow systems that behaves like a logically and uniformly addressable service. Each of the types of functionality listed in Table \ref{blocks} could be developed, presumably through one or more community efforts, as a building block (even the API through some programming trickery!). Other things like programming interfaces to queuing systems, programmable pilot systems for scheduling jobs, workload balancers, and ensemble execution tools, among others, could be provided as well to create a rich ecosystem of reusable and interchangeable parts.
+are assembled into the final workflow management system, subsystem, or product.
+A building block is a collection of functionality commonly identified across
+existing workflow systems that behaves like a logically and uniformly
+addressable service. Each of the types of functionality listed in Table
+\ref{blocks} could be developed, presumably through one or more community
+efforts, as a building block (even the API through some programming trickery!).
+Other things like programming interfaces to queuing systems, programmable pilot
+systems for scheduling jobs, workload balancers, and ensemble execution tools,
+among others, could be provided as well to create a rich ecosystem of reusable
+and interchangeable parts.
 
-Reusable building blocks would greatly improve both interoperability and sustainability because they would standardize, to some degree, the programming interfaces and backends used by workflow management systems. To the extent that projects are willing to use common building blocks, proliferation would be fully decoupled from interoperability. Leadership Computing Facilities would not need to support every workflow management system, just a set of common building blocks. This is similar to how they support third-party libraries for software development: they do not support \textit{every code} used on these machines, but they support a set of common libraries that the codes can use. 
+Reusable building blocks would greatly improve both interoperability and
+sustainability because they would standardize, to some degree, the programming
+interfaces and backends used by workflow management systems. To the extent that
+projects are willing to use common building blocks, proliferation would be fully
+decoupled from interoperability. Leadership Computing Facilities would not need
+to support every workflow management system, just a set of common building
+blocks. This is similar to how they support third-party libraries for software
+development: they do not support \textit{every code} used on these machines, but
+they support a set of common libraries that the codes can use. 
 
-There is an important practical question here: Does this mean abandoning existing workflow management systems or redeveloping existing workflows? No, and in fact it may be quite practical to develop building blocks based on components of the most sophisticated workflow management systems already in existence. Furthermore, since building blocks would naturally enable interoperability, it is quite conceivable that a workflow that only executes on one system now may execute on many systems in the future with little or no modification. 
+There is an important practical question here: Does this mean abandoning
+existing workflow management systems or redeveloping existing workflows? No, and
+in fact it may be quite practical to develop building blocks based on components
+of the most sophisticated workflow management systems already in existence.
+Furthermore, since building blocks would naturally enable interoperability, it
+is quite conceivable that a workflow that only executes on one system now may
+execute on many systems in the future with little or no modification. 
 

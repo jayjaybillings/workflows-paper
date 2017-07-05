@@ -1,54 +1,52 @@
-%%This is a very basic article template.
-%%There is just one section and two subsections.
+%%This is a very basic article template.  %%There is just one section and two
+%%subsections.  
 \documentclass[conference]{IEEEtran}
 
-\usepackage{cite}
-\usepackage{graphicx}
-\usepackage{color}
+\usepackage{cite} 
+\usepackage{graphicx} 
+\usepackage{color} 
 \usepackage{amsmath}
-\usepackage{tabularx}
-\usepackage{supertabular}
+\usepackage{tabularx} 
+\usepackage{supertabular} 
 \usepackage{longtable}
-\usepackage{booktabs}
-\usepackage[autostyle]{csquotes}
+\usepackage{booktabs} 
+\usepackage[autostyle]{csquotes} 
 \usepackage{listings}
-\usepackage{url}
+\usepackage{url} 
 \usepackage{todonotes}
 
 \begin{document}
 
-
-% \title{A Proposal on Workflows and the Interoperability of Workflow Management Systems}
-
-% \title{A Fresh Perspective on Workflows and the Interoperability of Workflow Management Systems}
-
 \title{Towards Common Components and a Standard Model for Workflow Systems}
 
-%\title{A Fresh Perspective on Workflows Systems}
 
-% \title{A Fresh Perspective on Workflows and the Interoperability of Workflow Management Systems}
-
-
-\author{\IEEEauthorblockN{Jay Jay Billings}
-\IEEEauthorblockA{Oak Ridge National Laboratory\\
-PO Box 2008 MS 6173\\
-Oak Ridge TN USA 37831\\
-Email: billingsjj@ornl.gov\\
-Twitter: @jayjaybillings}
-\and
-\IEEEauthorblockN{Shantenu Jha}
-\IEEEauthorblockA{RADICAL, ECE\\
-Rutgers University, \\
-Piscataway NJ USA 08854\\
-Email: shantenu.jha@rutgers.edu}
-}
+\author{\IEEEauthorblockN{Jay Jay Billings} \IEEEauthorblockA{Oak Ridge National
+Laboratory\\ PO Box 2008 MS 6173\\ Oak Ridge TN USA 37831\\ Email:
+billingsjj@ornl.gov\\ Twitter: @jayjaybillings} \and \IEEEauthorblockN{Shantenu
+Jha} \IEEEauthorblockA{RADICAL, ECE\\ Rutgers University, \\ Piscataway NJ USA
+08854\\ Email: shantenu.jha@rutgers.edu} }
 
 \maketitle
 
-\begin{abstract}
-\todo{This abstract is based on the one page document that we sent to the future of scientific workflows document. I like the ideas, but it is just a place holder. We should update as needed!}
+\begin{abstract} \todo{This abstract is based on the one page document that we
+sent to the future of scientific workflows document. I like the ideas, but it is
+just a place holder. We should update as needed!}
 
-Discussions on workflows and workflow management systems inevitably turn to questions about the natures of those very subjects. What is a workflow? What is a workflow management system? Surveying five papers will often give five different definitions of both. This has led to what the Oak Ridge Leadership Computing Facility’s 2016 report refers to as “the current proliferation of workflow systems in response to perceived domain-specific needs of scientific workflows.” Many of these systems tend to be monolithic with few extension mechanisms for those not fully versed in the existing code base, making reuse and interoperability practically impossible. This paper examines this phenomenon and proposes that the community should 1) focus on the development of common building blocks that can be assembled into domain-specific workflow management systems, and 2) that common building blocks are the best way to address workflow management system interoperability. This examination is performed in light of the growing need for "workflow campaigns" that execute workflows across facilities, systems and workflow types.
+Discussions on workflows and workflow management systems inevitably turn to
+questions about the natures of those very subjects. What is a workflow? What is
+a workflow management system? Surveying five papers will often give five
+different definitions of both. This has led to what the Oak Ridge Leadership
+Computing Facility’s 2016 report refers to as “the current proliferation of
+workflow systems in response to perceived domain-specific needs of scientific
+workflows.” Many of these systems tend to be monolithic with few extension
+mechanisms for those not fully versed in the existing code base, making reuse
+and interoperability practically impossible. This paper examines this phenomenon
+and proposes that the community should 1) focus on the development of common
+building blocks that can be assembled into domain-specific workflow management
+systems, and 2) that common building blocks are the best way to address workflow
+management system interoperability. This examination is performed in light of
+the growing need for "workflow campaigns" that execute workflows across
+facilities, systems and workflow types.
 
 \end{abstract}
 
@@ -56,24 +54,22 @@ Discussions on workflows and workflow management systems inevitably turn to ques
 
 This manuscript has been authored by UT-Battelle, LLC under Contract No.
 DEAC05-00OR22725 with the U.S. Department of Energy. The United States
-Government retains and the publisher, by accepting the article for
-publication, acknowledges that the United States Government retains a
-nonexclusive, paid-up, irrevocable, world-wide license to publish or
-reproduce the published form of this manuscript, or allow others to do
-so, for United States Government purposes. The Department of Energy will
-provide public access to these results of federally sponsored research
-in accordance with the DOE Public Access Plan
+Government retains and the publisher, by accepting the article for publication,
+acknowledges that the United States Government retains a nonexclusive, paid-up,
+irrevocable, world-wide license to publish or reproduce the published form of
+this manuscript, or allow others to do so, for United States Government
+purposes. The Department of Energy will provide public access to these results
+of federally sponsored research in accordance with the DOE Public Access Plan
 (http://energy.gov/downloads/doe-public-access-plan ).
 
 \input{introduction}
 \input{workflows-review}
-\input{problems}
 \input{common}
 \input{buildingblocks}
 \input{conclusions}
 \input{ack}
 
-% The bibliography
+% The bibliography 
 \bibliographystyle{IEEEtran}
 \bibliography{IEEEabrv,bib}
 

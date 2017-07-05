@@ -1,74 +1,134 @@
-\section{Challenges And Problems With These Models}\label{commonFunc}
+\section{Challenges And Problems With Workflow Models and Management Systems}\label{commonFunc}
 
-The review of different workflow models and management systems in \S\ref{workflows} illustrates the
-diversity of solutions, the lack of a coherent understanding of workflows per se, and the absence of a coordinated search for higher level concepts in spite of very good past efforts. That is, there is no ``Standard Model'' that describes what a workflow is, the common elements of workflow managements systems, or the description of how the pieces of such a system interact to execute a workflow. Furthermore, there are few examples of interoperability between existing systems in spite of significant community pressure and calls for cross-system workflow execution. Poor or non-existent interoperability is almost certainly a consequence of the ``Wild West'' state of the field.
+The review of different workflow models and management systems in
+\S\ref{workflows} illustrates the diversity of solutions, the lack of a coherent
+understanding of workflows per se, and the absence of a coordinated search for
+higher level concepts in spite of very good past efforts. That is, there is no
+``Standard Model'' that describes what a workflow is, the common elements of
+workflow managements systems, or the description of how the pieces of such a
+system interact to execute a workflow. Furthermore, there are few examples of
+interoperability between existing systems in spite of significant community
+pressure and calls for cross-system workflow execution. Poor or non-existent
+interoperability is almost certainly a consequence of the ``Wild West'' state of
+the field.
 
-The state of the field does not mean that there is little or no common functionality between workflow management systems in different domains. Many sources in the literature, including several previously cited above, indicate that the contrary is in fact true: there is significant duplication and commonality in this space. The overlap in these technologies is rarely discussed on its own merits, but instead it is commonly used to create large tables comparing different systems, as in \cite{ferreira_da_silva_characterization_nodate}. This creates a scenario where more effort is expending discussing \textit{how} something is accomplished versus the arguably more important question of \textit{what} must be accomplished. A healthy balance of \textit{what} versus \textit{how} is important, but we propose that the discussion of how particular problems are solved in workflow science has overtaken the discussion of what must be accomplished, thus creating two severe problems:
-\begin{itemize}
-\item A ``proliferation'' of tools that largely solve the same problem in the same way, but with separate, competing implementations primarily delineated along domain, as opposed to technological, boundaries.
-\item A general lack of interoperability and therefore inability to address larger scientific problems using hybrid (combined) workflows, multi-facility workflow campaigns, or heterogenous hardware without significant reimplementation.
-\end{itemize}
+The state of the field does not mean that there is little or no common
+functionality between workflow management systems in different domains. Many
+sources in the literature, including several previously cited above, indicate
+that the contrary is in fact true: there is significant duplication and
+commonality in this space. The overlap in these technologies is rarely discussed
+on its own merits, but instead it is commonly used to create large tables
+comparing different systems, as in
+\cite{ferreira_da_silva_characterization_nodate}. This creates a scenario where
+more effort is expending discussing \textit{how} something is accomplished
+versus the arguably more important question of \textit{what} must be
+accomplished. A healthy balance of \textit{what} versus \textit{how} is
+important, but we propose that the discussion of how particular problems are
+solved in workflow science has overtaken the discussion of what must be
+accomplished, thus creating two severe problems: \begin{itemize} \item A
+``proliferation'' of tools that largely solve the same problem in the same way,
+but with separate, competing implementations primarily delineated along domain,
+as opposed to technological, boundaries.  \item A general lack of
+interoperability and therefore inability to address larger scientific problems
+using hybrid (combined) workflows, multi-facility workflow campaigns, or
+heterogenous hardware without significant reimplementation.  \end{itemize}
 
-These two problems are closely related: Tooling proliferation might not be a problem, given sufficient resources, in the absence of calls for interoperability between systems, and interoperability might not be an issue if there were not so many existing systems! However, some of the most important aspects of these problems remain separable and can be examined as such.
+These two problems are closely related: Tooling proliferation might not be a
+problem, given sufficient resources, in the absence of calls for
+interoperability between systems, and interoperability might not be an issue if
+there were not so many existing systems! However, some of the most important
+aspects of these problems remain separable and can be examined as such.
 
-\subsection{Proliferation and Common Functionality}
-\label{commonFunc}
+\subsection{Proliferation and Common Functionality} \label{commonFunc}
 
-The problem with the increase in the number of existing workflow management systems have been illustrated well by reports and discussions surrounding the future of workflow management in the Leadership Computing Facilities. The ``proliferation'' of workflow management systems and the lack of a consistent definition of a workflow are signficant barriers to the adoption of this technology in these facilities. The High Performance Computing Facility
+The problem with the increase in the number of existing workflow management
+systems have been illustrated well by reports and discussions surrounding the
+future of workflow management in the Leadership Computing Facilities. The
+``proliferation'' of workflow management systems and the lack of a consistent
+definition of a workflow are signficant barriers to the adoption of this
+technology in these facilities. The High Performance Computing Facility
 Operational Assessment 2015: Oak Ridge Leadership Computing Facility (OLCF)
-report, \cite{barker_scientific_2007}, describes the problem that such facilities
-face,
-\begin{displayquote}
-These discussions concluded with the observation that the current proliferation
-of workflow systems in response to perceived domain-specific needs of 
-scientific workflows makes it difficult to choose a site-wide operational
-workflow manager, particularly for the leadership-class machines. However,
-there are opportunities where facilities can centralize workflow technology 
-offerings to reduce anticipated fragmentation. This is especially true if a 
-facility attempts to develop, deploy, and operate each and every workflow 
-solution requested by the user community. Through these evaluations, the OLCF
-seeks to identify interesting intersections that are of the most value to OLCF
-stakeholders.
-\end{displayquote}
-The strategy of the OLCF is notable because it makes a very practical observation that the problem of proliferation can be solved by consolidation of common functionality. This is typical of an operational perspective where deployment of capability is more important than in-depth investigation and research into how that capability functions. 
+report, \cite{barker_scientific_2007}, describes the problem that such
+facilities face, \begin{displayquote} These discussions concluded with the
+observation that the current proliferation of workflow systems in response to
+perceived domain-specific needs of scientific workflows makes it difficult to
+choose a site-wide operational workflow manager, particularly for the
+leadership-class machines. However, there are opportunities where facilities can
+centralize workflow technology offerings to reduce anticipated fragmentation.
+This is especially true if a facility attempts to develop, deploy, and operate
+each and every workflow solution requested by the user community. Through these
+evaluations, the OLCF seeks to identify interesting intersections that are of
+the most value to OLCF stakeholders.  \end{displayquote} The strategy of the
+OLCF is notable because it makes a very practical observation that the problem
+of proliferation can be solved by consolidation of common functionality. This is
+typical of an operational perspective where deployment of capability is more
+important than in-depth investigation and research into how that capability
+functions. 
 
-Table \ref{blocks} lists six common types of functionality that are readily observed in workflow management systems. There are certainly additional types of functionality that are common, but for pedagogical reasons we limit the list to the most obvious choices that can be discovered in a quick review of the literature previously cited.
+Table \ref{blocks} lists six common types of functionality that are readily
+observed in workflow management systems. There are certainly additional types of
+functionality that are common, but for pedagogical reasons we limit the list to
+the most obvious choices that can be discovered in a quick review of the
+literature previously cited.
 
-\begin{table*}[h]
-\begin{tabularx}{\textwidth}{|X|X|}
-\hline
-\textbf{Functionality} & \textbf{Description} \tabularnewline\hline
-Data and Metadata Management & Management of data, metadata, and general file input and output activities whether for internal (tracking) or external (user) consumption.
- \tabularnewline\hline 
-Workflow Execution Engine & The primary actor that manages the execution of the activities as provided by the workflow description. \tabularnewline\hline
-Resource Management and Acquisition & Acquisition and management of resources, whether computing or instrumentation, required for the successful execution of the workflow. \tabularnewline\hline 
-Task Management & Primary subsystem for managing individual activities, tasks or ``subworkflow'' using resources provided by the task management system. This system is sometimes, but neither often nor exclusively, part of the Workflow Execution Engine. \tabularnewline\hline
-Provenance Engine & System for tracking execution history, sources and destinations of ingested and generated artifacts, execution metadata including status, general logging, and provenance-based inference tools. \tabularnewline\hline 
-Application Programming Interface (API) & A non-functional element of most workflow management systems that is critical to successful deployment and maintenance of the full system as well as utilization as a tool for creating and executing workflows. \tabularnewline\hline
-\end{tabularx}
-\caption{Functionality commonly identified in workflow management systems.}
-\label{blocks}
-\end{table*}
+\begin{table*}[h] \begin{tabularx}{\textwidth}{|X|X|} \hline
+\textbf{Functionality} & \textbf{Description} \tabularnewline\hline Data and
+Metadata Management & Management of data, metadata, and general file input and
+output activities whether for internal (tracking) or external (user)
+consumption.  \tabularnewline\hline Workflow Execution Engine & The primary
+actor that manages the execution of the activities as provided by the workflow
+description. \tabularnewline\hline Resource Management and Acquisition &
+Acquisition and management of resources, whether computing or instrumentation,
+required for the successful execution of the workflow. \tabularnewline\hline
+Task Management & Primary subsystem for managing individual activities, tasks or
+``subworkflow'' using resources provided by the task management system. This
+system is sometimes, but neither often nor exclusively, part of the Workflow
+Execution Engine. \tabularnewline\hline Provenance Engine & System for tracking
+execution history, sources and destinations of ingested and generated artifacts,
+execution metadata including status, general logging, and provenance-based
+inference tools. \tabularnewline\hline Application Programming Interface (API) &
+A non-functional element of most workflow management systems that is critical to
+successful deployment and maintenance of the full system as well as utilization
+as a tool for creating and executing workflows. \tabularnewline\hline
+\end{tabularx} \caption{Functionality commonly identified in workflow management
+systems.} \label{blocks} \end{table*}
 
 \subsection{Interoperability}
 
-The primary driver for seeking interoperability between workflows systems is the need to address larger scientific problems that can only be solved with workflows that require multiple systems for complete execution. There have been a number of community calls for interoperability. For example, Session IV of the Twentieth Anniversary Meeting of the SOS Workshop
-(SOS20) focused on workflow and workflow management
-system development activities of the three participating institutions: Sandia
-National Laboratory, Oak Ridge National Laboratory, and the Swiss National Supercomputing
-Centre, \cite{pack_sos20_2016}. Multiple
+The primary driver for seeking interoperability between workflows systems is the
+need to address larger scientific problems that can only be solved with
+workflows that require multiple systems for complete execution. There have been
+a number of community calls for interoperability. For example, Session IV of the
+Twentieth Anniversary Meeting of the SOS Workshop (SOS20) focused on workflow
+and workflow management system development activities of the three participating
+institutions: Sandia National Laboratory, Oak Ridge National Laboratory, and the
+Swiss National Supercomputing Centre, \cite{pack_sos20_2016}. Multiple
 presenters illustrated the challenges facing the workflow science community and
-widely agreed that no single workflow management system could satisfy
-all the needs of those present. Instead, attendees proposed that the community as a whole would
-be served best by seeking to enable interoperability where possible. 
+widely agreed that no single workflow management system could satisfy all the
+needs of those present. Instead, attendees proposed that the community as a
+whole would be served best by seeking to enable interoperability where possible. 
 
-The Leadership Computing Facilities, as in \S\ref{commonFunc}, are affected by this as well. Consider the possibility that every facility may end up supporting different workflows systems entirely such that workflows at one facility can not be run at another without significant work to install one or more additional workflow management systems! This idea is also illustrated well in The Future of Scientific Workflows report through the concept of the ``large-scale science campaign,'' \cite{deelman_future_2015}. Such a campaign integrates multiple workflows, not necessarily all in the same workflow management system or at the same facility, to perform data acquisition from experimental equipment, modeling and analysis with supercomputers, and data analysis with either grid computing or supercomputers.
+The Leadership Computing Facilities, as in \S\ref{commonFunc}, are affected by
+this as well. Consider the possibility that every facility may end up supporting
+different workflows systems entirely such that workflows at one facility can not
+be run at another without significant work to install one or more additional
+workflow management systems! This idea is also illustrated well in The Future of
+Scientific Workflows report through the concept of the ``large-scale science
+campaign,'' \cite{deelman_future_2015}. Such a campaign integrates multiple
+workflows, not necessarily all in the same workflow management system or at the
+same facility, to perform data acquisition from experimental equipment, modeling
+and analysis with supercomputers, and data analysis with either grid computing
+or supercomputers.
 
-There are at least four distinct types of interoperability that merit discussion:
-\begin{itemize}
-\item Workflow Interoperability - sharing workflows across different science problems.
-\item Execution Delegation - delegating the execution of a workflow to a more capable or appropriate workflow management system
-\item Workflow System Interoperability - executing workflows by different workflow management systems.
-\item Interchangeable Workflow System Components - components that can be exchanged or used concurrently across one or more systems.
-\end{itemize}
-Two successful examples of limited interoperability between workflow systems are discussed in \cite{brooks_triquetrum:_2015} and \cite{mandal_integrating_2007}. Notably both projects leveraged flavors of the Ptolemy framework, namely Triquetrum and Kepler, and delegated the execution of workflows.
+There are at least four distinct types of interoperability that merit
+discussion: \begin{itemize} \item Workflow Interoperability - sharing workflows
+across different science problems.  \item Execution Delegation - delegating the
+execution of a workflow to a more capable or appropriate workflow management
+system \item Workflow System Interoperability - executing workflows by different
+workflow management systems.  \item Interchangeable Workflow System Components -
+components that can be exchanged or used concurrently across one or more
+systems.  \end{itemize} Two successful examples of limited interoperability
+between workflow systems are discussed in \cite{brooks_triquetrum:_2015} and
+\cite{mandal_integrating_2007}. Notably both projects leveraged flavors of the
+Ptolemy framework, namely Triquetrum and Kepler, and delegated the execution of
+workflows.
