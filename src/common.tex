@@ -43,6 +43,18 @@ aspects of these problems remain separable and can be examined as such.
 
 The primary application (workflow) needs are: lowering the burden to (i) develop, (ii)extend, and (iii) transport to another platform....platform The primary workflow system needs are: (i) determine when to use or re-use a workflow system, (ii) lower the need to develop components afresh....
 
+.... deciding which tools is suitable or optimal. Monolithic components are
+not conducive for functional specialization with minimal perturbation or
+refactoring.
+
+It is worth noting that workflow systems are rarely developed to extract
+(enhance) performance. They are more about coordinating different
+functionality without loss of performance. High-performance and scalability is
+not often a first order concern of general workflow systems; it may however,
+be a first order concern of specialized workflow systems or specific
+components, e.g, Pilot-system that is responsible for scalable and efficient
+task launching and management.
+
 Table \ref{blocks} lists six common types of functionality that are readily
 observed in workflow management systems. There are certainly additional types
 of functionality that are common, but for pedagogical reasons we limit the
