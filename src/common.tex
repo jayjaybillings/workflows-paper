@@ -22,7 +22,33 @@ comparing different systems, as in
 \cite{ferreira_da_silva_characterization_nodate}. This creates a scenario where
 more effort is expending discussing \textit{how} something is accomplished
 versus the arguably more important question of \textit{what} must be
-accomplished. A healthy balance of \textit{what} versus \textit{how} is
+accomplished. 
+
+Elaborating on \textit{what}, some primary application (workflow) needs are:
+(i) lowering the burden to  develop, (ii) extend, and (iii) transport an
+application (workflow) to another resource, platform or workflow system, and
+(iv) a conceptual framework or basis to decide which tools are suitable or
+optimal for a given workflow.
+
+Similarly, beyond clarity on the functional and performance capabilities of a
+workflow systen, the primary needs of users and developers of workflow systems
+are: (i) lower the need to develop components, (ii) determine which components
+to use, re-use, (iii) minimal perturbation and refactoring when extending or
+generalizing the functionality or use cases supported by a workflow system,
+(iv) provide constant performance across different use-case scenarios and
+scales.
+
+It is worth noting that workflow systems are rarely developed to extract
+(enhance) performance. They are more about coordinating different
+functionality without loss of performance. High-performance and scalability is
+not often a first order concern of general workflow systems; it may however,
+be a first order concern of specialized workflow systems or specific
+components, e.g, Pilot-system that is responsible for scalable and efficient
+task launching and management.
+
+
+
+A healthy balance of \textit{what} versus \textit{how} is
 important, but we propose that the discussion of how particular problems are
 solved in workflow science has overtaken the discussion of what must be
 accomplished, thus creating two severe problems: \begin{itemize} \item A
@@ -38,22 +64,6 @@ problem, given sufficient resources, in the absence of calls for
 interoperability between systems, and interoperability might not be an issue if
 there were not so many existing systems! However, some of the most important
 aspects of these problems remain separable and can be examined as such.
-
-{\bf some suggestions to  build upon "what"} 
-
-The primary application (workflow) needs are: lowering the burden to (i) develop, (ii)extend, and (iii) transport to another platform....platform The primary workflow system needs are: (i) determine when to use or re-use a workflow system, (ii) lower the need to develop components afresh....
-
-.... deciding which tools is suitable or optimal. Monolithic components are
-not conducive for functional specialization with minimal perturbation or
-refactoring.
-
-It is worth noting that workflow systems are rarely developed to extract
-(enhance) performance. They are more about coordinating different
-functionality without loss of performance. High-performance and scalability is
-not often a first order concern of general workflow systems; it may however,
-be a first order concern of specialized workflow systems or specific
-components, e.g, Pilot-system that is responsible for scalable and efficient
-task launching and management.
 
 Table \ref{blocks} lists six common types of functionality that are readily
 observed in workflow management systems. There are certainly additional types
