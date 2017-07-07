@@ -60,3 +60,14 @@ Furthermore, since building blocks would naturally enable interoperability, it
 is quite conceivable that a workflow that only executes on one system now may
 execute on many systems in the future with little or no modification. 
 
+A second question is whether or not building blocks represent a significantly new
+type of modularity versus a traditional software stack or framework. Building blocks
+arguably sit above these entities and have distinct conceptual and functional roles.
+A software stack is the full set of software, including all dependencies, for a given
+application or software product and a framework is the set of common functionality
+(APIs, not libraries) around which the product is built. On the other hand, a
+building block may be implemented using a framework and will have some software stack,
+but it will also offer a complete set of functionality that can be used directly in
+an application. The building block may also be offered on a different system with a
+different implementation (i.e. - using a different software stack and framework), but
+its neither its functionality nor service interface would change.
