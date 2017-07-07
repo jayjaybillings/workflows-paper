@@ -46,8 +46,6 @@ be a first order concern of specialized workflow systems or specific
 components, e.g, Pilot-system that is responsible for scalable and efficient
 task launching and management.
 
-
-
 A healthy balance of \textit{what} versus \textit{how} is
 important, but we propose that the discussion of how particular problems are
 solved in workflow science has overtaken the discussion of what must be
@@ -65,39 +63,6 @@ interoperability between systems, and interoperability might not be an issue if
 there were not so many existing systems! However, some of the most important
 aspects of these problems remain separable and can be examined as such.
 
-Table \ref{blocks} lists six common types of functionality that are readily
-observed in workflow management systems. There are certainly additional types
-of functionality that are common, but for pedagogical reasons we limit the
-list to the most obvious choices that can be discovered in a quick review of
-the literature previously cited.
-
-\begin{table*}[h] \begin{tabularx}{\textwidth}{|X|X|} \hline
-\textbf{Functionality} & \textbf{Description} \tabularnewline\hline Data and
-Metadata Management & Management of data, metadata, and general file input and
-output activities whether for internal (tracking) or external (user)
-consumption.  \tabularnewline\hline Workflow Execution Engine & The primary
-actor that manages the execution of the activities as provided by the workflow
-description. \tabularnewline\hline Resource Management and Acquisition &
-Acquisition and management of resources, whether computing or instrumentation,
-required for the successful execution of the workflow. \tabularnewline\hline
-Task Management & Primary subsystem for managing individual activities, tasks or
-``subworkflow'' using resources provided by the task management system. This
-system is sometimes, but neither often nor exclusively, part of the Workflow
-Execution Engine. \tabularnewline\hline Provenance Engine & System for tracking
-execution history, sources and destinations of ingested and generated artifacts,
-execution metadata including status, general logging, and provenance-based
-inference tools. \tabularnewline\hline Application Programming Interface (API) &
-A non-functional element of most workflow management systems that is critical to
-successful deployment and maintenance of the full system as well as utilization
-as a tool for creating and executing workflows. \tabularnewline\hline
-\end{tabularx} \caption{Functionality commonly identified in workflow management
-systems.} \label{blocks} \end{table*}
-
-
-A primary driver for seeking interoperability between workflows systems is the
-need to address larger scientific problems that can only be solved with
-workflows that require multiple systems for complete execution. 
-
 Workflow interoperability however is not a simple or single attribute. There
 are at least four distinct types of interoperability that merit discussion:
 \begin{itemize} \item Workflow Interoperability - sharing workflows across
@@ -110,7 +75,11 @@ or more systems.  \end{itemize} Two successful examples of limited
 interoperability between workflow systems are discussed in
 \cite{brooks_triquetrum:_2015} and \cite{mandal_integrating_2007}. Notably
 both projects leveraged flavors of the Ptolemy framework, namely Triquetrum
-and Kepler, and delegated the execution of workflows.
+and Kepler, and delegated the execution of workflows. A primary driver for
+seeking interoperability across these workflows systems has been the need to
+address larger scientific problems that can only be solved with workflows that
+require multiple systems for complete execution.
+
 
 
 

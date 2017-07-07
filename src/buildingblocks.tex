@@ -23,8 +23,8 @@ middleware services that enable the rapid development of resources. The
 challenge is to provide these capabilities along with considerations of
 usability and extensibility.
 
-Jha and Turilli discuss this trend as it relates to workflows from a cyber-
-infrastructure perspective and to existing large-scale scientific workflow
+Jha and Turilli discuss this trend as it relates to workflows from a 
+cyber-infrastructure perspective and to existing large-scale scientific workflow
 efforts, \cite{jha_building_2016}. They propose that, while historically
 successful, monolithic workflow systems present many problems for users,
 developers, and maintainers. Instead, they propose that a new ``Lego style''
@@ -32,9 +32,37 @@ approach might work better where individual ``building blocks'' of capability
 are assembled into the final workflow management system, subsystem, or
 product.
 
-A building block is a collection of functionality commonly identified across
-existing workflow systems that behaves like a logically and uniformly
-addressable service. Each of the types of functionality listed in Table
+More formally, a building block is a collection of functionality commonly
+identified across existing workflow systems that behaves like a logically and
+uniformly addressable service. Table \ref{blocks} lists six common types of
+functionality that are readily observed in workflow management systems. There
+are certainly additional types of functionality that are common, but for
+pedagogical reasons we limit the list to the most obvious choices that can be
+discovered in a quick review of the literature previously cited.
+
+\begin{table*}[h] \begin{tabularx}{\textwidth}{|X|X|} \hline
+\textbf{Functionality} & \textbf{Description} \tabularnewline\hline Data and
+Metadata Management & Management of data, metadata, and general file input and
+output activities whether for internal (tracking) or external (user)
+consumption.  \tabularnewline\hline Workflow Execution Engine & The primary
+actor that manages the execution of the activities as provided by the workflow
+description. \tabularnewline\hline Resource Management and Acquisition &
+Acquisition and management of resources, whether computing or instrumentation,
+required for the successful execution of the workflow. \tabularnewline\hline
+Task Management & Primary subsystem for managing individual activities, tasks or
+``subworkflow'' using resources provided by the task management system. This
+system is sometimes, but neither often nor exclusively, part of the Workflow
+Execution Engine. \tabularnewline\hline Provenance Engine & System for tracking
+execution history, sources and destinations of ingested and generated artifacts,
+execution metadata including status, general logging, and provenance-based
+inference tools. \tabularnewline\hline Application Programming Interface (API) &
+A non-functional element of most workflow management systems that is critical to
+successful deployment and maintenance of the full system as well as utilization
+as a tool for creating and executing workflows. \tabularnewline\hline
+\end{tabularx} \caption{Functionality commonly identified in workflow management
+systems.} \label{blocks} \end{table*}
+
+Each of the types of functionality listed in Table
 \ref{blocks} could be developed, presumably through one or more community
 efforts, as a building block (even the API through some programming
 trickery!). Other things like programming interfaces to queuing systems,
