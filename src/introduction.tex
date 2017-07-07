@@ -39,11 +39,7 @@ to jump between workflow execution for data analysis and modeling and
 simulation. 
 
 Recent developments suggest that this may be neither desirable nor necessary.
-Specifically, as scientific problems become more complex, functionality moves
-from libraries into operating systems, and open source development continues to
-rise as the dominant means of collaborating on software development activities,
-the scalability, sophistication, and maintainability of large monolithic systems
-raise significant questions. Software complexity, in particular, often makes it
+The continued scalability, sophistication and maintainability of large, monolithic systems is called into question as scientific problems become more complex, functionality moves from libraries into operating systems, and open source development continues to rise as the dominant means of collaborating on software development. Software complexity, in particular, often makes it
 impossible for development on large systems to scale to the required level 
 because the accretion of new capability means managing larger pools of
 people and a larger software development effort. One obvious alternative with
@@ -55,18 +51,19 @@ distribute the work required to construct the building blocks from the effort to
 define workflows and to create workflow management systems that may share the
 building blocks while retaining required customizations. This article
 contributes to the on-going discussion by providing the following:
-\begin{itemize} \item We provide an illustration of the diverse nature of
+\begin{itemize}
+\item We provide an illustration of the diverse nature of
 scientific workflows, (see \S \ref{workflows}), that describes the different
 areas where scientific workflows and systems have appeared in the literature,
 how they have been classified in the past, and the arguments around coalescence
-that are driven by calls of interoperability.  \item We describe a necessary
+that are driven by calls of interoperability (see \S\ref{interop} and \S\ref{commonFunc}). 
+\item We describe a necessary
 subset of functionality that is common across a number of scientific workflow
 management systems which would, in principle, be good candidates for
-consolidation and sharing, (see \S \ref{commonFunc}).\todo{"F your language! I
-want C/Python/something!" What to say?} \item We develop an understanding of
+consolidation and sharing, (see \S \ref{buildings-blocks}).
+\item We develop an understanding of
 these common elements as building blocks and how composing these building blocks
 addresses a number of the problems not easily addressed by the monolithic design
-of existing systems, see \S \ref{buildings-blocks}).\todo{One good example: How
-to run Pegasus or BigPanda on Titan? Not easy, but would be easier with the
-right building block.} \end{itemize}
+of existing systems, see \S\ref{buildings-blocks} and \S\ref{discussion}).
+\end{itemize}
 
