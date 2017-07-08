@@ -7,10 +7,11 @@
 \usepackage[autostyle]{csquotes} 
 \usepackage{url} 
 \usepackage{todonotes}
+\usepackage{float}
+\usepackage{array}
+\usepackage{tabu}
 
 \begin{document}
-
-%Discussion of building blocks and modularity
 
 \title{Towards Common Components and a Standard Model for Workflow Systems}
 
@@ -28,8 +29,8 @@ Jha} \IEEEauthorblockA{RADICAL, ECE\\ Rutgers University, \\ Piscataway NJ USA
 The study of ``workflow science'' has an open secret: Discussions about workflows and workflow management systems inevitably turn into discussions about the nature of those very topics! Too often, surveying a number of papers will result in different definitions from each paper and a strong inconsistency that leaves the reader with a skewed opinion. This inconsistency often centers around the different between several different types of workflows, including grid, modeling and simulation, uncertainty quantification, and purely conceptual workflows. This work explores this phenomenon by examining the different types of workflows and workflow management systems, reviewing the perspective of a large supercomputing facility, examining the common features and problems of workflow management systems, and finally presenting a proposed solution based on the concept of common Building Blocks. The implications of the continuing proliferation of workflow management systems and the lack of interoperability between these systems are discussed from a practical perspective.
 
 \end{abstract}
-
-{\footnote*{Notice of Copyright: This manuscript has been authored by UT-
+\hfill \\
+\underline{Notice of Copyright:} This manuscript has been authored by UT-
 Battelle, LLC under Contract No. DEAC05-00OR22725 with the U.S. Department of
 Energy. The United States Government retains and the publisher, by accepting
 the article for publication, acknowledges that the United States Government
@@ -37,8 +38,7 @@ retains a nonexclusive, paid-up, irrevocable, world-wide license to publish or
 reproduce the published form of this manuscript, or allow others to do so, for
 United States Government purposes. The Department of Energy will provide
 public access to these results of federally sponsored research in accordance
-with the DOE Public Access Plan (http://energy.gov/downloads/doe-public-
-access-plan ).}
+with the DOE Public Access Plan (http://energy.gov/downloads/doe-public-access-plan).
 
 
 \input{introduction}
@@ -47,7 +47,6 @@ access-plan ).}
 \input{common}
 \input{buildingblocks}
 \input{discussion}
-%\input{conclusions}
 \input{ack}
 
 % The bibliography 
