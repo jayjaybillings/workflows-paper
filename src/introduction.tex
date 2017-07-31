@@ -12,25 +12,24 @@ made to continue.
 standard ways.  
 \end{itemize}
 
-This example may be recognized by many as a description - but not a definition -
-of a \textit{workflow}. Experts from many different backgrounds can easily think
+This example may be recognized by many as a description---but not a definition---of a workflow. Experts from many backgrounds can easily think
 of activities that fit this description and even systems that automate the
 activity. However, each expert will probably also imagine a different workflow:
-a businessperson might imagine the workflow for processing payments, a medical
-professional might imagine it to be updating medical charts and records, and
+a businessperson might imagine the workflow for processing payments; a medical
+professional might imagine updating medical charts and records; and
 scientists might imagine performing an analysis with modeling and simulation
 software, analyzing a large amount of data, or quantifying uncertainty. Within
 the scientific community this has led to a rather predictable situation:
-Everyone has a different definition of ``workflow'' and has created their own
+Everyone has a different definition of workflow and has created their own
 systems for managing and processing workflows.
 
-This leads to some very practical consequences for \textit{scientific
-workflows}. In spite of the similarities in high-level abstractions and
+This leads to some very practical consequences for scientific
+workflows. In spite of the similarities in high-level abstractions and
 higher-order concepts, extremely specialized software solutions and communities
 have developed to process scientific workflows. These differences hold across
 scientific problems, all generally providing some level of service that was not
 or perhaps is not available in a regular programming language, system library,
-or problem solving workbench. These systems have accreted workflow management
+or problem-solving workbench. These systems have accreted workflow management
 capabilities over time that have effectively resulted in the creation of large,
 monolithic software stacks that cannot communicate between each other, require a
 very large amount of expertise to use, often put very high demands on back-end
@@ -39,31 +38,31 @@ to jump between workflow execution for data analysis and modeling and
 simulation. 
 
 Recent developments suggest that this may be neither desirable nor necessary.
-The continued scalability, sophistication and maintainability of large, monolithic systems is called into question as scientific problems become more complex, functionality moves from libraries into operating systems, and open source development continues to rise as the dominant means of collaborating on software development. Software complexity, in particular, often makes it
+The continued scalability, sophistication, and maintainability of large, monolithic systems is called into question as scientific problems become more complex, functionality moves from libraries to operating systems, and open source development continues to rise as the dominant means of collaborating on software development. Software complexity, in particular, often makes it
 impossible for development on large systems to scale to the required level 
-because the accretion of new capability means managing larger pools of
+because the accretion of new capabilities means managing larger pools of
 people and a larger software development effort. One obvious alternative with
-some degree of historical precedence in the field is to develop \textit{common
-building blocks} that provide common services used to both define and execute
+some degree of historical precedence in the field is to develop common
+building blocks that provide common services used to both define and execute
 workflows. Such an approach not only makes it possible to coalesce around a
-standard definition and understanding of workflows, but to separate and
+standard definition and understanding of workflows, but also make it possible to separate and
 distribute the work required to construct the building blocks from the effort to
 define workflows and to create workflow management systems that may share the
 building blocks while retaining required customizations. This article
-contributes to the on-going discussion by providing the following:
+contributes to the ongoing discussion by providing
 \begin{itemize}
-\item We provide an illustration of the diverse nature of
-scientific workflows, (see \S \ref{workflows}), that describes the different
+\item an illustration of the diverse nature of
+scientific workflows (\S \ref{workflows}) that describes the different
 areas where scientific workflows and systems have appeared in the literature,
 how they have been classified in the past, and the arguments around coalescence
-that are driven by calls of interoperability (see \S\ref{interop} and \S\ref{commonFunc}). 
-\item We describe a necessary
+that are driven by calls of interoperability (\S\ref{interop} and \S\ref{commonFunc});
+\item a description of the necessary
 subset of functionality that is common across a number of scientific workflow
-management systems which would, in principle, be good candidates for
-consolidation and sharing, (see \S \ref{buildings-blocks}).
-\item We develop an understanding of
+management systems that would, in principle, be good candidates for
+consolidation and sharing (\S \ref{buildings-blocks}); and
+\item an understanding of
 these common elements as building blocks and how composing these building blocks
 addresses a number of the problems not easily addressed by the monolithic design
-of existing systems, see \S\ref{buildings-blocks} and \S\ref{discussion}).
+of existing systems (\S\ref{buildings-blocks} and \S\ref{discussion}).
 \end{itemize}
 

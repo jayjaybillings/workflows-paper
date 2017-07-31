@@ -3,7 +3,7 @@
 The two problems detailed above are side effects of the relentless march of
 progress. The traditional approach for building workflow systems has been to
 build as much of the required capability as possible into the system itself,
-relying very little on external services or even third party code, to address
+relying very little on external services or even third party code to address
 pressing issues in one or more domains. However, history has shown that
 important high-level functionality slowly moves down the software stack and
 into kernels, kernel services, and system libraries. Is it better at that
@@ -12,12 +12,12 @@ to learn, or to develop yet another workflow management system with common
 tools, implementing only the gaps instead?
 
 The answer to this question is complicated by the fact that workflows
-themselves are not what they used to be. First, new workflows are often the
+themselves have evolved. First,contemporary workflows are often the
 representation of methodological advances and may be more pervasive,  short-
-lived and wide-ranging than historical workflows. Further, they are no longer
-confined to ``big science'' projects since sophisticated workflows are needed
-by many types of scientific projects, which leads to diverse ``design points'' and thus
-makes it unlikely that ``one size fits all.''  The ability to prototype, test
+lived, and wide-ranging than traditional workflows. Further, they are no longer
+confined to ``big science'' projects because sophisticated workflows are needed
+by many types of scientific projects, which leads to diverse design features and thus
+makes it unlikely that one model will be universally applicable.  The ability to prototype, test
 and experiment with workflows at scale suggests a need for interfaces and
 middleware services that enable the rapid development of resources. The
 challenge is to provide these capabilities along with considerations of
@@ -25,10 +25,10 @@ usability and extensibility.
 
 Jha and Turilli discuss this trend as it relates to workflows from a 
 cyber-infrastructure perspective and to existing large-scale scientific workflow
-efforts, \cite{jha_building_2016}. They propose that, while historically
+efforts \cite{jha_building_2016}. They propose that, while historically
 successful, monolithic workflow systems present many problems for users,
-developers, and maintainers. Instead, they propose that a new ``Lego style''
-approach might work better where individual ``building blocks'' of capability
+developers, and maintainers. Instead, they propose that a new ``Lego-style''
+approach might work better where individual building blocks of capability
 are assembled into the final workflow management system, subsystem, or
 product.
 
@@ -37,32 +37,31 @@ identified across existing workflow systems that behaves like a logically and
 uniformly addressable service. Table \ref{blocks} lists six common types of
 functionality that are readily observed in workflow management systems. There
 are certainly additional types of functionality that are common, but for
-pedagogical reasons we limit the list to the most obvious choices that can be
-discovered in a quick review of the literature previously cited.
+pedagogical reasons we limit the list to the most obvious choices in a quick review of the literature previously cited.
 
 \begin{table*}[h]
 \begin{tabu} to \textwidth {|X[l]|X[l]|} \hline
 \textbf{Functionality} & \textbf{Description} \tabularnewline\hline Data and
-Metadata Management & Management of data, metadata, and general file input and
-output activities whether for internal (tracking) or external (user)
+metadata management & Management of data, metadata, and general file input and
+output activities whether for internal tracking or external user
 consumption. \\ \hline 
-Workflow Execution Engine & The primary
+Workflow execution engine & The primary
 actor that manages the execution of the activities as provided by the workflow
 description. \tabularnewline\hline 
-Resource Management and Acquisition &
+Resource management and acquisition &
 Acquisition and management of resources, whether computing or instrumentation,
 required for the successful execution of the workflow. \tabularnewline\hline
-Task Management & Primary subsystem for managing individual activities, tasks or
+Task management & Primary subsystem for managing individual activities, tasks or
 ``subworkflow'' using resources provided by the task management system. This
-system is sometimes, but neither often nor exclusively, part of the Workflow
-Execution Engine. \tabularnewline\hline 
-Provenance Engine & System for tracking
-execution history, sources and destinations of ingested and generated artifacts,
+system is sometimes, but neither often nor exclusively, part of the workflow
+execution engine. \tabularnewline\hline 
+Provenance engine & System for tracking
+execution history, sources, and destinations of ingested and generated artifacts,
 execution metadata including status, general logging, and provenance-based
 inference tools. \tabularnewline\hline 
-Application Programming Interface (API) &
+Application programming interface (API) &
 A non-functional element of most workflow management systems that is critical to
-successful deployment and maintenance of the full system as well as utilization
+successful deployment and maintenance of the full system as well as use
 as a tool for creating and executing workflows. \tabularnewline\hline
 \end{tabu} 
 \caption{Functionality commonly identified in workflow management
@@ -80,19 +79,19 @@ rich ecosystem of reusable and interchangeable parts.
 
 Reusable building blocks would greatly improve both interoperability and
 sustainability because they would standardize, to some degree, the programming
-interfaces and backends used by workflow management systems. To the extent that
+interfaces and back-ends used by workflow management systems. To the extent that
 projects are willing to use common building blocks, proliferation would be fully
-decoupled from interoperability. Leadership Computing Facilities would not need
+decoupled from interoperability. Leadership computing facilities would not need
 to support every workflow management system, just a set of common building
 blocks. This is similar to how they support third-party libraries for software
-development: they do not support \textit{every code} used on these machines, but
+development: they do not support every code used on these machines, but
 they support a set of common libraries that the codes can use. 
 
 There is an important practical question here: Does this mean abandoning
 existing workflow management systems or redeveloping existing workflows? No, and
 in fact it may be quite practical to develop building blocks based on components
 of the most sophisticated workflow management systems already in existence.
-Furthermore, since building blocks would naturally enable interoperability, it
+Furthermore, because building blocks would naturally enable interoperability, it
 is quite conceivable that a workflow that only executes on one system now may
 execute on many systems in the future with little or no modification. 
 
@@ -105,4 +104,4 @@ application or software product and a framework is the set of common functionali
 building block may be implemented using a framework and will have some software stack,
 but it will also offer a complete set of functionality that can be used directly in
 an application. The building block may also be offered on a different system with a
-different implementation (i.e. - using a different software stack and framework), but neither its functionality nor service interface would change.
+different implementation (i.e., using a different software stack and framework), but neither its functionality nor service interface would change.

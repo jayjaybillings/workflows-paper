@@ -6,17 +6,17 @@ The review of different workflow models and management systems in
 \S\ref{workflows} illustrates the diversity of solutions, the lack of a coherent
 understanding of workflows per se, and the absence of a coordinated search for
 higher level concepts in spite of very good past efforts. That is, there is no
-``Standard Model'' that describes what a workflow is, the common elements of
+standard model that describes what a workflow is, the common elements of
 workflow managements systems, or the description of how the pieces of such a
 system interact to execute a workflow. Furthermore, there are few examples of
-interoperability between existing systems in spite of significant community
+interoperability among existing systems in spite of significant community
 pressure and calls for cross-system workflow execution. Poor or non-existent
 interoperability is almost certainly a consequence of the ``Wild West'' state of
 the field.
 
 The state of the field does not mean that there is little or no common
 functionality between workflow management systems in different domains. Many
-sources in the literature, including several previously cited above, indicate
+sources in the literature, including several cited above, indicate
 that the contrary is in fact true: there is significant duplication and
 commonality in this space. The overlap in these technologies is rarely discussed
 on its own merits, but instead it is commonly used to create large tables
@@ -26,14 +26,14 @@ more effort is spent discussing \textit{how} something is accomplished
 versus the arguably more important question of \textit{what} must be
 accomplished. 
 
-Expanding on the concept of \textit{what} must be accomplished, some primary application (workflow) needs include:
-(i) lowering the development burden, (ii) extensibility, (iii) transporting an
-application (workflow) to another resource, platform or workflow system, and
+Expanding on the concept of what must be accomplished, some primary application (workflow) needs include
+(i) lowering the development burden; (ii) extensibility; (iii) transporting an
+application workflow to another resource, platform, or workflow system; and
 (iv) providing a conceptual framework or basis to decide which tools are suitable or optimal for a given workflow.
 
 Similarly, beyond having clarity on the functional and performance capabilities of a
-workflow system, the primary needs of users and developers of workflow systems include: (i) lowering the need to develop components, (ii) determining which components
-to use/re-use, (iii) minimal perturbation and refactoring when extending or
+workflow system, the primary needs of users and developers of workflow systems include (i) lowering the need to develop components, (ii) determining which components
+to use and reuse, (iii) minimal perturbation and refactoring when extending or
 generalizing the functionality or use cases supported by a workflow system,
 (iv) providing constant performance across different use-case scenarios and
 scales.
@@ -43,64 +43,64 @@ It is worth noting that workflow systems are rarely developed to extract
 functionality without loss of performance. High-performance and scalability is
 not often a first order concern of general workflow systems; it may however,
 be a first order concern of specialized workflow systems or specific
-components, e.g, a Pilot-system that is responsible for scalable and efficient task launching and management.
+components (e.g, a pilot-system that is responsible for scalable and efficient task launching and management).
 
-A healthy balance of \textit{what} versus \textit{how} is
+A healthy balance of what versus how is
 important, but we propose that the discussion of how particular problems are
 solved in workflow science has overtaken the discussion of what must be
-accomplished, thus creating two severe problems: \begin{itemize} \item A
+accomplished, creating two severe problems: \begin{itemize} \item A
 ``proliferation'' of tools that largely solve the same problem in the same way,
 but with separate, competing implementations primarily delineated along domain,
 as opposed to technological, boundaries.  \item A general lack of
 interoperability and therefore inability to address larger scientific problems
-using hybrid (combined) workflows, multi-facility workflow campaigns, or
-heterogenous hardware without significant reimplementation.  \end{itemize}
+using hybrid combined workflows, multifacility workflow campaigns, or
+heterogeneous hardware without significant reimplementation.  \end{itemize}
 
 These two problems are closely related: Tooling proliferation might not be a
 problem, given sufficient resources, in the absence of calls for
 interoperability between systems, and interoperability might not be an issue if
-there were not so many existing systems! However, some of the most important
-aspects of these problems remain separable and can be examined as such.
+there were not so many existing systems. However, some of the most important
+aspects of these problems remain separable and should be examined as such.
 
 Workflow interoperability is neither a simple nor singular attribute. There
 are at least four distinct types of interoperability that merit discussion:
 
-\begin{itemize}
+\begin{enumerate}
 
-\item Workflow Interoperability - sharing workflows across different science
+\item Workflow interoperability---Sharing workflows across different science
 problems. This was an original motivation in the initial days of eScience  and
 reproducible computational science. Early projects such as the MyGrid
 (subsequently MyExperiment) and related projects, pioneered and advanced the
 ability to share workflows across science domains, science  problems and
 scientists.
 
-\item Execution Delegation - delegating the execution of a workflow to a more
-capable or appropriate workflow management system. Consider, for example, the formal specification of a workflow as a directed acyclic graph (DAG) and associated data descriptions, such that the specification is complete and thereby in principle executable by any capable workflow management system.  Although in principle and
+\item Execution delegation---Delegating the execution of a workflow to a more
+capable or appropriate workflow management system. Consider, for example, the formal specification of a workflow as a directed acyclic graph and associated data descriptions, such that the specification is complete and thereby in principle executable by any capable workflow management system.  Although in principle and
 conceptually easy, this has proven to be less successful in practice for at least
-two primary reasons: (i) DAGs are a common, but not universal, formal specification of some workflows, and (ii) many specific consideration and assumptions beyond those
-associated with a DAG need to be factored when executing workflows. These
+two primary reasons: (i) directed acyclic graphs are a common, but not universal, formal specification of some workflows, and (ii) many specific consideration and assumptions beyond those
+associated with a directed acyclic graph need to be factored when executing workflows. These
 assumptions and specific considerations in turn are often due to inadequate
 infrastructure abstraction and separation of concerns. 
 
-\item Workflow System Interoperability - executing the same workflow(s) by
+\item Workflow system interoperability---Executing the same workflow(s) by
 different workflow management systems. In addition to the absence of a
 technical or formal basis for designing workflow management systems, the
 sociology of software engineering and tooling contributed to the proliferation
-of workflow management systems. In the presence of proliferation of tools,
+of workflow management systems. In the presence of a proliferation of tools,
 there was always a principled if not a practical demand for such workflow
 system interoperability. However, even if initially a  more  ``principled'' form
-of interoperability, it can be argued that Workflow System Interoperabilty is
-increasingly important due to the needs and requirements of reproducible
+of interoperability, it can be argued that workflow system interoperabilty is
+increasingly important because of the needs and requirements of reproducible
 science.
 
-\item Interchangeable Workflow System Components - components that can be
-exchanged or used concurrently across one or more systems. Hitherto, this is
+\item Interchangeable workflow system components---Components that can be
+exchanged or used concurrently across one or more systems. Until now, this is
 the least articulated or argued form of interoperability. However, it is
 the most critical and core form of interoperability that our work suggests 
 must be addressed, if the component based approach to workflow systems is
 ever to supplement monolithic workflow systems.
 
-\end{itemize} 
+\end{enumerate} 
 
 
 A primary driver for seeking interoperability across workflows systems
