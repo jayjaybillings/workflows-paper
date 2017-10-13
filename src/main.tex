@@ -1,6 +1,6 @@
 %%This is a very basic article template.  %%There is just one section and two
 %%subsections.  
-\documentclass[10pt,conference,final]{IEEEtran}
+\documentclass[10pt,conference,final]{acmart}
 
 \usepackage{cite} 
 \usepackage{tabularx}
@@ -15,14 +15,25 @@
 
 \title{Toward Common Components for Open Workflow Systems}
 
+\author{Jay Jay Billings}
+\orcid{orcid.org/0000-0001-8811-2688}
+\affiliation{
+\institution{Oak Ridge National Laboratory}
+\streetaddress{PO Box 2008 MS 6173}
+\city{Oak Ridge}
+\state{TN}
+\country{USA}
+\postcode{37831}}
+\email{billingsjj@ornl.gov\\ Twitter: @jayjaybillings} 
 
-\author{\IEEEauthorblockN{Jay Jay Billings} \IEEEauthorblockA{Oak Ridge National
-Laboratory\\ PO Box 2008 MS 6173\\ Oak Ridge, TN USA 37831\\ Email:
-billingsjj@ornl.gov\\ Twitter: @jayjaybillings} \and \IEEEauthorblockN{Shantenu
-Jha} \IEEEauthorblockA{RADICAL, ECE\\ Rutgers University, \\ Piscataway, NJ USA
-08854\\ Email: shantenu.jha@rutgers.edu} }
-
-\maketitle
+\author{Shantenu Jha}
+\affiliation{
+\institution{RADICAL, ECE - Rutgers University}
+\city{Piscataway}
+\state{NJ}
+\country{USA}
+\postcode{08854}}
+\email{shantenu.jha@rutgers.edu}
 
 \begin{abstract}
 
@@ -48,14 +59,10 @@ workflow management systems and the lack of interoperability between these
 systems are discussed from a practical perspective. In doing so, we have begun
 an investigation of the design and implementation of open workflow systems for
 supercomputers based upon common components.
-
-% based approach and thereby open workflow systems for of workflow systems for
-% supercomputing.
-
-% The study of “workflow science” has an open secret: Discussions about workflows and workflow management systems inevitably turn into discussions about the nature of those very topics! Too often, surveying a number of papers will result in different definitions from each paper and a strong inconsistency that leaves the reader with a skewed opinion. This inconsistency often centers around the different between several different types of workflows, including grid, modeling and simulation, uncertainty quantification, and purely conceptual workflows. This work explores this phenomenon by examining the different types of workflows and workflow management systems, reviewing the perspective of a large supercomputing facility, examining the common features and problems of workflow management systems, and finally presenting a proposed solution based on the concept of common building blocks. The implications of the continuing proliferation of workflow management systems and the lack of interoperability between these systems are discussed from a practical perspective.
-
 \end{abstract}
-\hfill \\
+
+\maketitle
+
 \underline{Notice of Copyright:} This manuscript has been authored by UT-
 Battelle, LLC under Contract No. DEAC05-00OR22725 with the U.S. Department of
 Energy. The United States Government retains and the publisher, by accepting
@@ -66,8 +73,6 @@ United States Government purposes. The Department of Energy will provide
 public access to these results of federally sponsored research in accordance
 with the DOE Public Access Plan (http://energy.gov/downloads/doe-public-access-plan).
 
-
-
 \input{introduction}
 \input{workflows-review}
 \input{experience}
@@ -77,7 +82,7 @@ with the DOE Public Access Plan (http://energy.gov/downloads/doe-public-access-p
 \input{ack}
 
 % The bibliography 
-\bibliographystyle{IEEEtran}
-\bibliography{IEEEabrv,bib}
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{bib}
 
 \end{document}
