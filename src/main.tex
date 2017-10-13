@@ -13,7 +13,7 @@
 
 \begin{document}
 
-\title{Toward Common Components and a Standard Model for Workflow Systems}
+\title{Toward Common Components for Open Workflow Systems}
 
 
 \author{\IEEEauthorblockN{Jay Jay Billings} \IEEEauthorblockA{Oak Ridge National
@@ -26,7 +26,33 @@ Jha} \IEEEauthorblockA{RADICAL, ECE\\ Rutgers University, \\ Piscataway, NJ USA
 
 \begin{abstract}
 
-The study of ``workflow science'' has an open secret: Discussions about workflows and workflow management systems inevitably turn into discussions about the nature of those very topics! Too often, surveying a number of papers will result in different definitions from each paper and a strong inconsistency that leaves the reader with a skewed opinion. This inconsistency often centers around the different between several different types of workflows, including grid, modeling and simulation, uncertainty quantification, and purely conceptual workflows. This work explores this phenomenon by examining the different types of workflows and workflow management systems, reviewing the perspective of a large supercomputing facility, examining the common features and problems of workflow management systems, and finally presenting a proposed solution based on the concept of common building blocks. The implications of the continuing proliferation of workflow management systems and the lack of interoperability between these systems are discussed from a practical perspective.
+The role of scalable high-performance workflows and flexible workflow
+management systems that can support multiple simulations will continue to
+increase in importance. For example, with the end of Dennard scaling, there is
+a need to substitute a single long running simulation with multiple repeats of
+shorter simulations, or concurrent replicas. Further, many scientific problems
+involve many simulations to support order to solve a higher-level problem or
+statistically meaningful science. However most supercomputing software
+development and performance enhancements have focused on optimizing single-
+simulation performance. On the other hand, there is a strong inconsistency in
+the definition and practice of workflows and workflow management systems. This
+inconsistency often centers around the difference between several different
+types of workflows, including modeling and simulation, uncertainty
+quantification, and purely conceptual workflows. This work explores this
+phenomenon by examining the different types of workflows and workflow
+management systems, reviewing the perspective of a large supercomputing
+facility, examining the common features and problems of workflow management
+systems, and finally presenting a proposed solution based on the concept of
+common building blocks. The implications of the continuing proliferation of
+workflow management systems and the lack of interoperability between these
+systems are discussed from a practical perspective. In doing so, we have begun
+an investigation of the design and implementation of open workflow systems for
+supercomputers based upon common components.
+
+% based approach and thereby open workflow systems for of workflow systems for
+% supercomputing.
+
+% The study of “workflow science” has an open secret: Discussions about workflows and workflow management systems inevitably turn into discussions about the nature of those very topics! Too often, surveying a number of papers will result in different definitions from each paper and a strong inconsistency that leaves the reader with a skewed opinion. This inconsistency often centers around the different between several different types of workflows, including grid, modeling and simulation, uncertainty quantification, and purely conceptual workflows. This work explores this phenomenon by examining the different types of workflows and workflow management systems, reviewing the perspective of a large supercomputing facility, examining the common features and problems of workflow management systems, and finally presenting a proposed solution based on the concept of common building blocks. The implications of the continuing proliferation of workflow management systems and the lack of interoperability between these systems are discussed from a practical perspective.
 
 \end{abstract}
 \hfill \\
@@ -39,6 +65,7 @@ reproduce the published form of this manuscript, or allow others to do so, for
 United States Government purposes. The Department of Energy will provide
 public access to these results of federally sponsored research in accordance
 with the DOE Public Access Plan (http://energy.gov/downloads/doe-public-access-plan).
+
 
 
 \input{introduction}
