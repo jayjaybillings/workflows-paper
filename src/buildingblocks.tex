@@ -1,4 +1,4 @@
-\section{The Solution: Common Building Blocks}\label{buildings-blocks}
+\subsection{Common Building Blocks}\label{buildings-blocks}
 
 The two problems detailed above are side effects of the relentless march of
 progress. The traditional approach for building workflow systems has been to
@@ -9,35 +9,34 @@ important high-level functionality slowly moves down the software stack and
 into kernels, kernel services, and system libraries. Is it better at that
 point to use an existing system that requires significant time and resources
 to learn, or to develop yet another workflow management system with common
-tools, implementing only the gaps instead?
+tools, implementing only the gaps instead? The community has arguably chosen
+both!
 
-The answer to this question is complicated by the fact that workflows
-themselves have evolved. First, contemporary workflows are often the
-representation of methodological advances and may be more pervasive,  short-
-lived, and wide-ranging than traditional workflows. Further, they are no longer
-confined to ``big science'' projects because sophisticated workflows are needed
-by many types of scientific projects, which leads to diverse design features and thus
-makes it unlikely that one model will be universally applicable.  The ability to prototype, test
-and experiment with workflows at scale suggests a need for interfaces and
+Contemporary workflows are no longer confined to ``big science'' projects,
+which leads to diverse design features and thus makes it unlikely that one
+model will be universally applicable. The ability to prototype, test and
+experiment with workflows at scale suggests a need for interfaces and
 middleware services that enable the rapid development of resources. The
 challenge is to provide these capabilities along with considerations of
 usability and extensibility.
 
 Jha and Turilli discuss this trend as it relates to workflows from a 
-cyber-infrastructure perspective and to existing large-scale scientific workflow
-efforts \cite{jha_building_2016}. They propose that, while historically
-successful, monolithic workflow systems present many problems for users,
-developers, and maintainers. Instead, they propose that a new ``Lego-style''
-approach might work better where individual building blocks of capability
-are assembled into the final workflow management system, subsystem, or
-product.
+cyber-infrastructure perspective and to existing large-scale scientific
+workflow efforts \cite{jha_building_2016}. They propose that, while
+historically successful, monolithic workflow systems present many problems for
+users, developers, and maintainers. Instead, they propose that a new
+``Lego-style'' approach might work better where individual building blocks of
+capability are assembled into the final workflow management system, subsystem,
+or product.
 
 More formally, a building block is a collection of functionality commonly
 identified across existing workflow systems that behaves like a logically and
 uniformly addressable service. Table \ref{blocks} lists six common types of
-functionality that are readily observed in workflow management systems. There
-are certainly additional types of functionality that are common, but for
-pedagogical reasons we limit the list to the most obvious choices in a quick review of the literature previously cited.
+functionality that are readily observed in workflow management systems
+(although others may exist as well). Reusable building blocks would greatly
+improve both interoperability and sustainability because they would
+standardize, to some degree, the programming interfaces and back-ends used by
+workflow management systems.
 
 \begin{table*}[h]
 \begin{tabu} to \textwidth {|X[l]|X[l]|} \hline
@@ -69,39 +68,10 @@ systems.}
 \label{blocks}
 \end{table*}
 
-Each of the types of functionality listed in Table
-\ref{blocks} could be developed, presumably through one or more community
-efforts, as a building block (even the API through some programming
-trickery!). Other things like programming interfaces to queuing systems,
-programmable pilot systems for scheduling jobs, workload balancers, and
-ensemble execution tools, among others, could be provided as well to create a
-rich ecosystem of reusable and interchangeable parts.
+In practice, it may be that numerous de facto ``common" building blocks
+already exist because they may form the basis of the most sophisticated
+workflow management systems already in existence. Furthermore, because building
+blocks would naturally enable interoperability, it is quite conceivable that a
+workflow that only executes on one system now may execute on many systems in
+the future with little or no modification.
 
-Reusable building blocks would greatly improve both interoperability and
-sustainability because they would standardize, to some degree, the programming
-interfaces and back-ends used by workflow management systems. To the extent that
-projects are willing to use common building blocks, proliferation would be fully
-decoupled from interoperability. Leadership computing facilities would not need
-to support every workflow management system, just a set of common building
-blocks. This is similar to how they support third-party libraries for software
-development: they do not support every code used on these machines, but
-they support a set of common libraries that the codes can use. 
-
-There is an important practical question here: Does this mean abandoning
-existing workflow management systems or redeveloping existing workflows? No, and
-in fact it may be quite practical to develop building blocks based on components
-of the most sophisticated workflow management systems already in existence.
-Furthermore, because building blocks would naturally enable interoperability, it
-is quite conceivable that a workflow that only executes on one system now may
-execute on many systems in the future with little or no modification. 
-
-A second question is whether or not building blocks represent a significantly new
-type of modularity versus a traditional software stack or framework. Building blocks
-arguably sit above these entities and have distinct conceptual and functional roles.
-A software stack is the full set of software, including all dependencies, for a given
-application or software product and a framework is the set of common functionality
-(APIs, not libraries) around which the product is built. On the other hand, a
-building block may be implemented using a framework and will have some software stack,
-but it will also offer a complete set of functionality that can be used directly in
-an application. The building block may also be offered on a different system with a
-different implementation (i.e., using a different software stack and framework), but neither its functionality nor service interface would change.

@@ -1,4 +1,4 @@
-\section{Introduction}
+%\section{Introduction}
 
 Suppose for a moment that there is an interesting activity that would benefit
 from automation, which is known because the activity exhibits the following
@@ -9,17 +9,18 @@ properties:
 and, furthermore, highly repetitive even in cases where decisions must be 
 made to continue.  
 \item The results of achieving this goal can be consumed or processed in 
-standard ways.  
+standard ways. Neither magic nor clairvoyance are required.
 \end{itemize}
 
-This example may be recognized by many as a description---but not a definition---of a workflow. Experts from many backgrounds can easily think
-of activities that fit this description and even systems that automate the
+This example may be recognized by many as a description---but not a
+definition---of a workflow. Experts from many backgrounds can easily think of
+activities that fit this description and even systems that automate the
 activity. However, each expert will probably also imagine a different workflow:
 a businessperson might imagine the workflow for processing payments; a medical
 professional might imagine updating medical charts and records; and
 scientists might imagine performing an analysis with modeling and simulation
-software, analyzing a large amount of data, or quantifying uncertainty. Within
-the scientific community this has led to a rather predictable situation:
+software, analyzing a large amount of data, or quantifying uncertainty.
+Within the scientific community this has led to a rather predictable situation:
 Everyone has a different definition of workflow and has created their own
 systems for managing and processing workflows.
 
@@ -37,32 +38,41 @@ systems either by design or through assumptions, and are often too specialized
 to jump between workflow execution for data analysis and modeling and
 simulation. 
 
-Recent developments suggest that this may be neither desirable nor necessary.
-The continued scalability, sophistication, and maintainability of large, monolithic systems is called into question as scientific problems become more complex, functionality moves from libraries to operating systems, and open source development continues to rise as the dominant means of collaborating on software development. Software complexity, in particular, often makes it
-impossible for development on large systems to scale to the required level 
-because the accretion of new capabilities means managing larger pools of
-people and a larger software development effort. One obvious alternative with
-some degree of historical precedence in the field is to develop common
-building blocks that provide common services used to both define and execute
-workflows. Such an approach not only makes it possible to coalesce around a
-standard definition and understanding of workflows, but also make it possible to separate and
-distribute the work required to construct the building blocks from the effort to
-define workflows and to create workflow management systems that may share the
-building blocks while retaining required customizations. This article
-contributes to the ongoing discussion by providing
-\begin{itemize}
-\item an illustration of the diverse nature of
-scientific workflows (\S \ref{workflows}) that describes the different
-areas where scientific workflows and systems have appeared in the literature,
-how they have been classified in the past, and the arguments around coalescence
-that are driven by calls of interoperability (\S\ref{interop} and \S\ref{commonFunc});
-\item a description of the necessary
-subset of functionality that is common across a number of scientific workflow
-management systems that would, in principle, be good candidates for
-consolidation and sharing (\S \ref{buildings-blocks}); and
-\item an understanding of
-these common elements as building blocks and how composing these building blocks
-addresses a number of the problems not easily addressed by the monolithic design
-of existing systems (\S\ref{buildings-blocks} and \S\ref{discussion}).
-\end{itemize}
+Recent developments suggest that this may be signficantly costly to maintain in
+the future, and not an ideal solution. The continued scalability,
+sophistication, and maintainability of large, monolithic systems is called into
+question as scientific problems become more complex, functionality moves from
+libraries to operating systems, and open source development continues to rise
+as the dominant means of collaborating on software. Software complexity, in
+particular, often makes it impossible for development on large systems to scale
+to the required level because the accretion of new capabilities means managing
+larger pools of people and a larger software development effort. One obvious
+alternative with some degree of historical precedence in the field is to
+develop common building blocks that provide common services used to both define
+and execute workflows. The astute reader may ask ``Why has this alternative
+failed in the past?'' The answer to that questions lies in the very nature of
+workflow science's diverse ecosystem. 
+%Such an approach not only makes it possible to coalesce
+%around a standard definition and understanding of workflows, but also make it
+%possible to separate and distribute the work required to construct the building
+%blocks from the effort to define workflows and to create workflow management
+%systems that may share the building blocks while retaining required
+%customizations. This article contributes to the ongoing discussion by providing
+%\begin{itemize}
+%\item an illustration of the diverse nature of
+%scientific workflows (\S \ref{workflows}) that describes the different
+%areas where scientific workflows and systems have appeared in the literature,
+%how they have been classified in the past, and the arguments around coalescence
+%that are driven by calls of interoperability (\S\ref{interop} and
+% \S\ref{commonFunc});
+%\item a description of the necessary
+%subset of functionality that is common across a number of scientific workflow
+%management systems that would, in principle, be good candidates for
+%consolidation and sharing (\S \ref{buildings-blocks}); and
+%\item an understanding of
+%these common elements as building blocks and how composing these building
+% blocks addresses a number of the problems not easily addressed by the
+% monolithic design
+%of existing systems (\S\ref{buildings-blocks} and \S\ref{discussion}).
+%\end{itemize}
 

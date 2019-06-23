@@ -6,16 +6,18 @@ understand it by starting from a historical perspective.
 
 The use and study of workflows and the initial implementation of workflow
 management systems (i.e., systems that manage one or more activities related to
-workflows), and especially workflow execution, was developed in the business world to addres the need to automate business processes. Lud\"{a}scher et~al.  ascribe the
-origins of workflows and workflow management systems to ``office automation''
-trends in the 1970s \cite{ludascher_scientific_2006}. Van~Der~Aalst argues that
-``workflows'' arose from the needs of businesses to not only execute tasks but also
-``to manage the flow of work through the organization,'' and managing
-workflows is the natural evolution from the monolithic applications of the 1960s
-to applications that rely on external functionality in the 1990s
-\cite{van_der_aalst_application_1998}. By 1995, in the presence of many workflow
-tools, the Workflow Management Coalition had developed a ``standard'' definition
-of workflows \cite{hollingsworth_workflow_1993}:
+workflows), and especially workflow execution, was developed in the business
+world to addres the need to automate business processes. Lud\"{a}scher et~al. 
+ascribe the origins of workflows and workflow management systems to ``office
+automation'' trends in the 1970s \cite{ludascher_scientific_2006}.
+Van~Der~Aalst argues that ``workflows'' arose from the needs of businesses to
+not only execute tasks but also ``to manage the flow of work through the
+organization,'' and managing workflows is the natural evolution from the
+monolithic applications of the 1960s to applications that rely on external
+functionality in the 1990s \cite{van_der_aalst_application_1998}. By 1995, in
+the presence of many workflow tools, the Workflow Management Coalition had
+developed a ``standard'' definition of workflows
+\cite{hollingsworth_workflow_1993}:
 
 \begin{displayquote} A workflow is the automation of a business process, in
 whole or part, during which documents, information or tasks are passed from one
@@ -26,11 +28,13 @@ In the early 2000s, workflow systems started finding use in scientific contexts
 where process automation was required for scientific uses instead of traditional
 business uses. At the time, the focus of scientific workflows also shifted to
 focus primarily on data processing and managing heterogeneous infrastructure for
-large ``grids'' of networked services
-\cite{yu_taxonomy_2005}. Yu and Buyya define a workflow as
+large ``grids'' of networked services \cite{yu_taxonomy_2005}. Yu and Buyya
+define a workflow as \todo{Make sure usage of ``grid workflow'' is consistent
+across the document.}
 
-\begin{displayquote}. . .  a collection of tasks that are processed on distributed
-resources in a well-defined order to accomplish a specific goal.\end{displayquote}
+\begin{displayquote}. . .  a collection of tasks that are processed on
+distributed resources in a well-defined order to accomplish a specific
+goal.\end{displayquote}
 
 This latter definition is important because of what is missing: the human
 element. For many in the grid/eScience workflows community this has become the
@@ -38,17 +42,19 @@ standard definition of a workflow and the involvement of humans results not in a
 single workflow, but multiple workflows spanned by a human.  Machines or
 instruments are absent from the definition as well, but in practice many modern
 grid workflows are launched automatically when data ``comes off'' of instruments
-because they remain the primary source of data in grid workflows (cf.~\cite{megino_panda:_2015}).
+because they remain the primary source of data in grid workflows
+(cf.~\cite{megino_panda:_2015}).
 
 In addition to grid workflows, the scientific community started exploring
 ``modeling and simulation workflows'' which focus not on data flow but on the
 orchestration of activities related to modeling and simulation instead,
-sometimes on small local computers, but often on the largest of the world's leadership class supercomputers. Unlike grid workflows they tend to require
-human interaction in one way or another.  Some of these workflows are defined in
-the context of a particular way of working, such as the Automation, Data,
-Environment, and Sharing model of Pizzi et~al. \cite{pizzi_aiida:_2016},
-the Design-to-Analysis model of Clay et~al. \cite{clay_incorporating_2015},
-or the model of Billings et~al. \cite{billings_eclipse_2017}.
+sometimes on small local computers, but often on the largest of the world's
+leadership class supercomputers. Unlike grid workflows they tend to require
+human interaction in one way or another.  Some of these workflows are defined
+in the context of a particular way of working, such as the Automation, Data,
+Environment, and Sharing model of Pizzi et~al. \cite{pizzi_aiida:_2016}, the
+Design-to-Analysis model of Clay et~al. \cite{clay_incorporating_2015}, or the
+model of Billings et~al. \cite{billings_eclipse_2017}.
 
 Additional types of workflows in the scientific community include workflows that
 process ensembles of calculations for uncertainty quantification, verification
@@ -92,19 +98,19 @@ because of ambiguity in the definition.
 \subsection{Taxonomies and Classification}\label{taxonomies-and-classification}
 There have been several efforts to classify, survey, or develop taxonomies for
 workflows and workflow management systems, and these efforts are significant in
-large part because they represent a collective call for higher order concepts in
-the space. Yu and Buyya present an exceptional taxonomy for grid
+large part because they represent a collective call for developing higher order
+concepts in the space. Yu and Buyya present an exceptional taxonomy for grid
 workflows. Several other efforts provide highly useful vocabularies and
 analyses as well.
 
 Yu and Buyya developed a taxonomy for workflow management systems on grids that
 sought to capture the architectural style and identify comparison criteria
 \cite{yu_taxonomy_2005}. Their work is notable because it largely avoids a
-discussion of applications and focuses purely on the functional properties of
-the workflow management systems as they exist on the grids. Their work also
-shows how 13 common grid workflow management systems, including Pegasus
-and Kepler, fit into the taxonomy. Like other authors, Yu and Buyya cite
-the lack of standardized workflow syntax and language as sources of
+discussion of the workflows per se and focuses purely on the functional
+properties of the workflow management systems as they exist on the grids. Their
+work also shows how thirteen common grid workflow management systems, including
+Pegasus and Kepler, fit into the taxonomy. Like other authors, Yu and Buyya
+cite the lack of standardized workflow syntax and language as sources of
 interoperability issues.
 
 Scientific workflow management systems have flourished since their inception,
