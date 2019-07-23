@@ -1,12 +1,12 @@
 %\section{Introduction}
 
-Suppose for a moment that there is an interesting activity that would benefit
+Suppose for a moment there is an interesting activity that would benefit
 from automation, which is known because the activity exhibits the following
 properties: 
 \begin{itemize} 
 \item The goal of the activity is known and desirable.  
 \item The tasks to achieve the goal and complete the activity are also known 
-and, furthermore, highly repetitive even in cases where decisions must be 
+and, furthermore, are highly repetitive even in cases where decisions must be 
 made to continue.  
 \item The results of achieving this goal can be consumed or processed in 
 standard ways. Neither magic nor clairvoyance are required.
@@ -16,37 +16,37 @@ This example may be recognized by many as a description---but not a
 definition---of a workflow. Experts from many backgrounds can easily think of
 activities that fit this description and even systems that automate the
 activity. However, each expert will probably also imagine a different workflow:
-a businessperson might imagine the workflow for processing payments; a medical
+A businessperson might imagine the workflow for processing payments; a medical
 professional might imagine updating medical charts and records; and
 scientists might imagine performing an analysis with modeling and simulation
 software, analyzing a large amount of data, or quantifying uncertainty.
 Within the scientific community this has led to a rather predictable situation:
-Everyone has a different definition of workflow and has created their own
+Everyone has a different definition of workflow and has created his or her own
 systems for managing and processing workflows.
 
-This leads to some very practical consequences for scientific
+This leads to some practical consequences for scientific
 workflows. In spite of the similarities in high-level abstractions and
-higher-order concepts, extremely specialized software solutions and communities
-have developed to process scientific workflows. These differences hold across
-scientific problems, all generally providing some level of service that was not
-or perhaps is not available in a regular programming language, system library,
-or problem-solving workbench. These systems have accreted workflow management
-capabilities over time that have effectively resulted in the creation of large,
-monolithic software stacks that cannot communicate between each other, require a
-very large amount of expertise to use, often put very high demands on back-end
-systems either by design or through assumptions, and are often too specialized
-to jump between workflow execution for data analysis and modeling and
-simulation. 
+higher-order concepts, extremely specialized software solutions have been
+developed and communities have formed to process scientific workflows. These
+differences hold across scientific problems, with each generally providing some
+level of service that was not or perhaps is not available in a regular programming
+language, system library, or problem-solving workbench. These systems have
+accreted workflow management capabilities over time that have effectively
+resulted in the creation of large, monolithic software stacks that cannot
+communicate among each other, require a large amount of expertise to
+use, often put high demands on back-end systems either by design or
+through assumptions, and are often too specialized to jump between workflow
+execution for data analysis and modeling and simulation. 
 
-Recent developments suggest that this may be signficantly costly to maintain in
-the future, and not an ideal solution. The continued scalability,
+Recent developments suggest that this situation is not ideal and could be
+signficantly costly to maintain in the future. The continued scalability,
 sophistication, and maintainability of large, monolithic systems is called into
 question as scientific problems become more complex, functionality moves from
 libraries to operating systems, and open source development continues to rise
 as the dominant means of collaborating on software. Software complexity, in
 particular, often makes it impossible for development on large systems to scale
 to the required level because the accretion of new capabilities means managing
-larger pools of people and a larger software development effort. One obvious
+larger pools of people and a larger development effort. One obvious
 alternative with some degree of historical precedence in the field is to
 develop common building blocks that provide common services used to both define
 and execute workflows. The astute reader may ask ``Why has this alternative

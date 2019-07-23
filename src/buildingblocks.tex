@@ -1,20 +1,20 @@
 \subsection{Common Building Blocks}\label{buildings-blocks}
 
-The two problems detailed above are side effects of the relentless march of
+The two problems just detailed are side effects of the relentless march of
 progress. The traditional approach for building workflow systems has been to
 build as much of the required capability as possible into the system itself,
-relying very little on external services or even third party code to address
+relying very little on external services or even third-party code to address
 pressing issues in one or more domains. However, history has shown that
 important high-level functionality slowly moves down the software stack and
-into kernels, kernel services, and system libraries. Is it better at that
-point to use an existing system that requires significant time and resources
-to learn, or to develop yet another workflow management system with common
+continues into kernels, kernel services, and system libraries. Is it better at
+that point to use an existing system that requires significant time and resources
+to learn or to develop yet another workflow management system with common
 tools, implementing only the gaps instead? The community has arguably chosen
 both!
 
 Contemporary workflows are no longer confined to ``big science'' projects,
 which leads to diverse design features and thus makes it unlikely that one
-model will be universally applicable. The ability to prototype, test and
+model will be universally applicable. The ability to prototype, test, and
 experiment with workflows at scale suggests a need for interfaces and
 middleware services that enable the rapid development of resources. The
 challenge is to provide these capabilities along with considerations of
@@ -22,7 +22,7 @@ usability and extensibility.
 
 Jha and Turilli discuss this trend as it relates to workflows from a 
 cyber-infrastructure perspective and to existing large-scale scientific
-workflow efforts \cite{jha_building_2016}. They propose that, while
+workflow efforts \cite{jha_building_2016}. They propose that, although
 historically successful, monolithic workflow systems present many problems for
 users, developers, and maintainers. Instead, they propose that a new
 ``Lego-style'' approach might work better where individual building blocks of
@@ -45,21 +45,21 @@ metadata management & Management of data, metadata, and general file input and
 output activities whether for internal tracking or external user
 consumption. \\ \hline 
 Workflow execution engine & The primary
-actor that manages the execution of the activities as provided by the workflow
+actor that manages execution of activities as provided by the workflow
 description. \tabularnewline\hline 
 Resource management and acquisition &
 Acquisition and management of resources, whether computing or instrumentation,
-required for the successful execution of the workflow. \tabularnewline\hline
-Task management & Primary subsystem for managing individual activities, tasks or
-``subworkflow'' using resources provided by the task management system. This
+required for successful execution of the workflow. \tabularnewline\hline
+Task management & Primary subsystem for managing individual activities, tasks,
+or ``subworkflows'' using resources provided by the task management system. This
 system is sometimes, but neither often nor exclusively, part of the workflow
 execution engine. \tabularnewline\hline 
 Provenance engine & System for tracking
-execution history, sources, and destinations of ingested and generated artifacts,
-execution metadata including status, general logging, and provenance-based
-inference tools. \tabularnewline\hline 
-Application programming interface (API) &
-A non-functional element of most workflow management systems that is critical to
+execution history; sources; and destinations of ingested and generated
+artifacts, and execution metadata, including status, general logging, and
+provenance-based inference tools. \tabularnewline\hline 
+API &
+A nonfunctional element of most workflow management systems that is critical to
 successful deployment and maintenance of the full system as well as use
 as a tool for creating and executing workflows. \tabularnewline\hline
 \end{tabu} 
@@ -68,10 +68,10 @@ systems.}
 \label{blocks}
 \end{table*}
 
-In practice, it may be that numerous de facto ``common" building blocks
+In practice, it could be that numerous de facto ``common" building blocks
 already exist because they may form the basis of the most sophisticated
 workflow management systems already in existence. Furthermore, because building
 blocks would naturally enable interoperability, it is quite conceivable that a
-workflow that only executes on one system now may execute on many systems in
+workflow that now executes only on one system now may execute on many systems in
 the future with little or no modification.
 
