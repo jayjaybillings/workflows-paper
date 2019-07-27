@@ -1,0 +1,49 @@
+Workflow interoperability is neither a simple nor singular attribute. There
+are at least four distinct types of interoperability that merit discussion:
+
+\todo{Look at these bullets - need to be consistent with later chapters!}
+
+\begin{enumerate}
+
+\item Workflow interoperability---Sharing workflows across different science
+problems. This was an original motivation in the initial days of eScience  and
+reproducible computational science. 
+
+\item Execution delegation---Delegating the execution of a workflow to a more
+capable or appropriate workflow management system. Consider, for example, the
+formal specification of a workflow as a directed acyclic graph and associated
+data descriptions such that the specification is complete and thereby, in
+principle, executable by any capable workflow management system.  Although
+easy in principle and conception, this has proven to be less successful
+in practice for at least two primary reasons: (i) Directed acyclic graphs are a
+common, but not universal, formal specification of some workflows, and (ii)
+many specific considerations and assumptions beyond those associated with a
+directed acyclic graph need to be factored when executing workflows. These
+assumptions and specific considerations in turn are often due to inadequate
+infrastructure abstraction and separation of concerns.
+
+\item Workflow system interoperability---Executing the same workflow(s) by
+different workflow management systems. In addition to the absence of a
+technical or formal basis for designing workflow management systems, the
+sociology of software engineering and tooling contributed to the proliferation
+of workflow management systems. In the presence of a proliferation of tools,
+there was always a principled if not a practical demand for such workflow
+system interoperability. However, even if initially a  more  ``principled'' form
+of interoperability, it can be argued that workflow system interoperabilty is
+increasingly important because of the needs and requirements of reproducible
+science.
+
+\item Interchangeable workflow system components---Exchanging or
+concurrently using components that can be exchanged across
+one or more systems.
+
+\end{enumerate} 
+
+A primary driver for seeking interoperability across workflow systems
+has been the need to address larger scientific problems that can only be
+solved with workflows that require multiple systems for complete execution.
+Two successful examples of limited interoperability between workflow systems
+are discussed in \cite{brooks_triquetrum:_2015} and
+\cite{mandal_integrating_2007}. Notably, both projects leveraged flavors of
+the Ptolemy framework, namely Triquetrum and Kepler, and delegated the
+execution of workflows. 
